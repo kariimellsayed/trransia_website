@@ -13,11 +13,13 @@ const tajawal = Tajawal({
   subsets: ["arabic"],
   weight: ["400", "500", "700"],
   variable: "--font-tajawal",
+  preload: true,
 });
 const inter = Inter({
   subsets: ["latin"],
   weight: ["400", "600", "700"],
   variable: "--font-inter",
+  preload: true,
 });
 
 // Metadata

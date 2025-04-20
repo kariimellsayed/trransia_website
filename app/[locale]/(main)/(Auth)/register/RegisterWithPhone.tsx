@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 import Link from "next/link";
 
 const RegisterWithPhone = () => {

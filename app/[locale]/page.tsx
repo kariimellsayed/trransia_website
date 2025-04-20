@@ -1,6 +1,5 @@
-"use client";
-
 import { services } from "@/data";
+import { Link as IntlLink } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
@@ -31,13 +30,13 @@ const Teaser = () => {
           </h1>
 
           <div className="self-end animate-scale">
-            <Link
+            <IntlLink
               href="/home"
               className="text-white text-center px-10 py-3 font-semibold bg-gradient-to-r from-primary
                to-black rounded-xl hover:from-black hover:to-primary transition-all duration-300 self-end"
             >
               {t("Welcome.more")}
-            </Link>
+            </IntlLink>
           </div>
         </div>
       </div>

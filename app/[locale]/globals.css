@@ -155,10 +155,6 @@
     color: var(--brand-gray);
   }
 
-  .text-brandpinkish {
-    color: var(--brand-pinkish);
-  }
-
   .text-brandlightgray {
     color: var(--brand-light-gray);
   }
@@ -177,10 +173,6 @@
 
   .bg-brandgray {
     background-color: var(--brand-gray);
-  }
-
-  .bg-brandpinkish {
-    background-color: var(--brand-pinkish);
   }
 
   .bg-brandlightgray {
