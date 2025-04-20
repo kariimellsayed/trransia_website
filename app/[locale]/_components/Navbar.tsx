@@ -41,7 +41,7 @@ const Navbar = () => {
             alt="logo"
             width={89}
             height={68}
-            className="object-contain"
+            className="object-contain  sm:w-[89px] sm:h-[68px] w-[70px] h-[58px]"
           />
         </Link>
 
@@ -116,9 +116,12 @@ const Navbar = () => {
                 <Link
                   key={link.key}
                   href={link.href}
-                  className={`text-lg font-normal transition-colors hover:text-primary ${
-                    pathname === link.href ? "text-primary font-semibold" : ""
-                  }`}
+                  className={`text-lg font-normal transition-colors w-full flex justify-center px-7 py-3 rounded-xl
+                    border-1 border-primary duration-200 hover:bg-primary hover:text-white ${
+                      pathname === link.href &&
+                      "bg-primary text-white font-medium"
+                    }`}
+                  onClick={() => setMenuOpen(false)}
                 >
                   {t(link.key)}
                 </Link>
@@ -126,7 +129,7 @@ const Navbar = () => {
             )}
           </nav>
 
-          <div className="flex items-end justify-between py-4 border-b-2 border-brandgray mt-5">
+          <div className="flex items-end justify-between py-4 border-b-2 border-brandgray mt-10">
             {/* Profile */}
             <h3 className="text-black font-semibold">kariimellsayed</h3>
             {/* Languache */}
