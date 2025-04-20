@@ -1,0 +1,224 @@
+{
+  "Taps": {
+    "reg": {
+      "email": "Register With Email",
+      "phone": "Register With Phone"
+    },
+    "log": {
+      "email": "Login With Email",
+      "phone": "Login With Phone"
+    }
+  },
+  "SEO": {
+    "title": "Transia | Your All-in-One Business Solutions Platform",
+    "description": "Welcome to Transia – your integrated platform for business solutions! We offer certified translation, advertising, and consulting services for individuals and companies. We also provide innovative digital marketing, tech solutions, and branded promotional gifts.",
+    "about": {
+      "title": "About Transia",
+      "description": "Transia offers a wide range of professional services for individuals and businesses, including certified translation, advertising, digital marketing, IT solutions, e-services, business support, blueprint printing, and promotional gifts. We provide integrated solutions that drive your success.",
+      "keywords": "Certified Translation, Advertising, Digital Marketing, IT Services, Student Services, Business Services, e-Services, Plot Printing, Promotional Gifts, Transia, Business Solutions"
+    },
+    "contact": {
+      "title": "Contact Us",
+      "description": "Get in touch with Transia through our various branches or communication channels including phone, email, and social media. We are here to support you and answer all inquiries regarding our translation, marketing, IT services, and more.",
+      "keywords": "Contact Transia, Transia Branches, Customer Support, Email, Phone Number, Support Services, Contact Info, Technical Support"
+    }
+  },
+  "RegisterWithEmail": {
+    "title": "Create an Account",
+    "user": "Username",
+    "email": "Email address",
+    "pass": "Password",
+    "eye1": "Show",
+    "eye2": "Hide",
+    "create": "Create Account",
+    "log": "Already have an account ?",
+    "link": "Log in",
+    "place1": "Enter your username",
+    "place2": "Enter your email address",
+    "place3": "Enter your password",
+    "loading": "Sign Up ..."
+  },
+  "RegisterWithPhone": {
+    "title": "Create an Account",
+    "user": "Username",
+    "phone": "Mobile Number",
+    "pass": "Password",
+    "eye1": "Show",
+    "eye2": "Hide",
+    "create": "Create Account",
+    "log": "Already have an account ?",
+    "link": "Log in",
+    "place1": "Enter your username",
+    "place2": "Enter your Mobile Number",
+    "place3": "Enter your password",
+    "loading": "Sign Up ..."
+  },
+  "LoginWithEmail": {
+    "title": "Login",
+    "email": "Email address",
+    "pass": "Password",
+    "eye1": "Show",
+    "eye2": "Hide",
+    "inter": "Log in",
+    "sign": "Don't have an account ?",
+    "link": "Sign up",
+    "place1": "Enter your email address",
+    "place2": "Enter your password",
+    "rem": "Remember me",
+    "forgot": "Forget password ?",
+    "loading": "Login In ..."
+  },
+  "LoginWithPhone": {
+    "title": "Login",
+    "phone": "Phone Number",
+    "pass": "Password",
+    "eye1": "Show",
+    "eye2": "Hide",
+    "inter": "Log in",
+    "sign": "Don't have an account ?",
+    "link": "Sign up",
+    "place1": "Enter your phone Number",
+    "place2": "Enter your password",
+    "rem": "Remember me",
+    "forgot": "Forget password ?",
+    "loading": "Login In ..."
+  },
+  "Navbar": {
+    "home": "Home",
+    "about": "About Us",
+    "customer": "Customer service",
+    "services": "Service",
+    "work": "Our work",
+    "service1": "Certified translation",
+    "service2": "Advertising and publicity",
+    "service3": "e-marketing",
+    "service4": "Information Technology",
+    "service5": "Student Service",
+    "service6": "Business Services",
+    "service7": "Electronic services",
+    "service8": "chart printer",
+    "service9": "promotional gifts",
+    "mobiletitle": "Transia"
+  },
+  "Footer": {
+    "des": "A Long Experience In Translating All The World’s Languages How To Pay Al Inma Bank As: Sultan Albaqami Foundation For Certified Translation",
+    "acount": "Account Number",
+    "ipan": "IPAN :",
+    "offer": "Our Offices Are Scattered Throughout The Kingdom. And Communicate Throughout The Day",
+    "worktime": {
+      "title": "Worktime",
+      "date": "From 8:00 AM To 12:00 PM Saturday to Thursday From 4:00 PM To 12:00 PM"
+    },
+    "contact": {
+      "title": "Contact us",
+      "customer": "Customer service",
+      "email": "Email",
+      "office": "Main Office",
+      "loc": "King Abdullah Road-Opposite to Mama Nora Restaurant"
+    }
+  },
+  "Welcome": {
+    "des": "Welcome to Transia – Your All-in-One Business Solutions Platform! We offer certified translation services, advertising and marketing solutions, and consultancy for individuals and businesses. Our services also include innovative tech solutions, digital marketing, and promotional gifts that reflect your brand identity. Additionally, we provide professional blueprint printing and digital services that simplify your daily transactions.",
+    "more": "More",
+    "offer": "For more offers and services",
+    "descount": "Get a discount when you register",
+    "reg": "Register Now"
+  },
+  "Services": {
+    "serve1": "Advertising and Promotion",
+    "serve2": "Business Services",
+    "serve3": "Student Service",
+    "serve4": "Electronic Services",
+    "serve5": "Certified Translation",
+    "serve6": "Digital Marketing",
+    "serve7": "Information Technology",
+    "serve8": "Promotional Gifts",
+    "serve9": "Plotter Printer"
+  },
+  "Hero": {
+    "title": "Transia",
+    "des": "Welcome to Transia – your gateway to integrated business solutions! We provide certified translations, creative advertising, and expert consultations for individuals and companies. Our services also include innovative IT solutions, impactful digital marketing, custom promotional gifts, professional blueprint printing, and convenient digital services.",
+    "link": "Book Your Service Now"
+  },
+  "Discus": {
+    "title": "Transia for certified translation for all languages ​​and for all electronic services, advertising and publicity",
+    "des": "Transia for certified translation, transcription and photocopying for all languages ​​is headquartered in Riyadh and is involved in numerous activities including: specialized certified translation for all languages, student services, transcription and photocopying, and design. Since its establishment, its name has been synonymous with innovation, excellence and superiority in several fields, and its resounding success is embodied in several diverse departments. Our office is officially certified by all government departments and agencies, as well as embassies inside and outside the Kingdom of Saudi Arabia. Languages ​​certified for translation in our offices.",
+    "visiontitle": "Vision",
+    "visiondes": "The secret to our success lies in our dedication to customer satisfaction by providing excellent services that exceed expectations, ensure strong customer relationships, and help them develop repeat business with us.",
+    "misiontitle": "Mision",
+    "misiondes": "We are committed to providing the highest quality translation, transcription and photocopying services while guaranteeing the best price for all our clients."
+  },
+  "ServicesSection": {
+    "title": "Service",
+    "des": "We have extensive experience in the field of translation of all world languages, as well as advertising, publicity and electronic services.",
+    "trans": "Certified translation",
+    "ad": "Advertising and publicity",
+    "business": "Businessmen Service",
+    "tech": "Information Technology",
+    "marketing": "e-marketing",
+    "student": "Student Services",
+    "elec": "Electronic services",
+    "print": "chart printer",
+    "gifts": "promotional gifts"
+  },
+  "Ques": {
+    "title": "Why do you need Transia and its professional services?",
+    "des": "High-quality translation isn't a luxury — it's essential for growing your business and connecting globally. Whether you're in finance, media, or run a startup, you’ll need a skilled translator who understands your industry’s terminology. Transia offers top-tier translation, along with digital marketing, advertising, and more. We're here to support your success."
+  },
+  "Contact": {
+    "contact-form": {
+      "des": "We have extensive experience in translating all the languages of the world.",
+      "payment-title": "Payment Method",
+      "payment-des": "Alinma Bank : Account Name: Bahr Al-Lughat for Certified Translation for All Languages",
+      "account-number": "Account Number",
+      "ipan": "IBAN",
+      "offer": "Our offices are spread across the Kingdom of Saudi Arabia.",
+      "working": "Working Hours",
+      "saturday": "Saturday To Thursday",
+      "wats": "Support By email and WhatsApp is available 24",
+      "phone": "Phone support",
+      "office": "Office hours",
+      "hours": "8:00 AM – 11:00 PM",
+      "friday": "Friday",
+      "friday-des": "ASR Prayer To 11:00 PM",
+      "contact-us": "Contact Us",
+      "name": "Name",
+      "phone-num": "Phone Number",
+      "email": "Email Address",
+      "message": "Message",
+      "send": "Send Message"
+    },
+    "media": {
+      "email": "Email",
+      "phone": "Phone Number",
+      "location": "Main Office",
+      "address": "King Abdullah Road-Opposite To Mama Nora Restaurant"
+    },
+    "branches": {
+      "first": "First Branch",
+      "second": "Second Branch",
+      "third": "Third Branch",
+      "fourth": "Forth Branch",
+      "five": "Fifth Branch",
+      "six": "Sixth Branch",
+      "ad1": "Riyadh – Saudi Arabia",
+      "ad2": "Jeddah – Saudi Arabia",
+      "ad3": "Al Damam – Saudi Arabia"
+    }
+  },
+  "About": {
+    "title": "Transia",
+    "des": "At [Transia], we offer a seamless and secure digital experience where customers can explore our services, connect with us, and make service requests. We believe professionalism and commitment are key to building trust and ensuring satisfaction, continuously evolving to meet market needs.",
+    "aboutTitle": "This website is the official platform for [Transia], which provides a comprehensive range of professional services that meet the needs of various sectors and individuals, according to the highest standards of quality, accuracy, and reliability. The company specializes in providing the following services:",
+    "ab1": "Certified translation in various languages, adhering to legal and official document standards.",
+    "ab2": "Advertising and publicity services using advanced methods that keep pace with market changes and enhance brand presence.",
+    "ab3": "Business services aimed at facilitating procedures and executing administrative and commercial tasks efficiently and professionally.",
+    "ab4": "Student services aimed at providing academic and procedural support, contributing to facilitating the educational process.",
+    "ab5": "Information technology services, including the development of digital solutions, information systems, and technical support.",
+    "ab6": "E-marketing through well-thought-out strategies aimed at enhancing digital interaction and achieving desired results.",
+    "ab7": "Designing and supplying promotional gifts that contribute to consolidating the corporate identity among clients and partners.",
+    "ab8": "Printing blueprints using the latest technologies and with high quality to meet the needs of engineers and designers.",
+    "ab9": "Electronic services that enable users to complete their transactions easily and quickly through smart digital solutions.",
+    "banner": "Our Partners"
+  }
+}
