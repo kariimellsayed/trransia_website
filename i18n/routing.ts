@@ -20,5 +20,13 @@ export const routing = defineRouting({
       en: "/contact",
       ar: "/تواصل_معنا",
     },
+    "/register": {
+      en: "/register",
+      ar: "/سجل",
+    },
+    "/login": {
+      en: "/login",
+      ar: "/دخول",
+    },
   },
 });

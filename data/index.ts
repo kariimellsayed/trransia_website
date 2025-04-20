@@ -19,7 +19,6 @@ export const navLinks = [
     ],
     href: "/services",
   },
-  // { key: "work", href: "/works" },
 ];
 
 // Services
