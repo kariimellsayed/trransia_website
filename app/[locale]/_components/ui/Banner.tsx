@@ -2,13 +2,13 @@ import { banners } from "@/data";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 
-const Banner = ({ title }: { title: string }) => {
+const Banner = ({ title }: { title: boolean }) => {
   const t = useTranslations("About");
   return (
     <section className="padding-y">
       {title && (
         <h1 className="text-brandblack font-semibold sm:text-3xl text-2xl">
-          {t(title)}
+          {t("banner")}
         </h1>
       )}
 

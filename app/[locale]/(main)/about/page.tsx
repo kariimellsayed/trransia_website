@@ -63,7 +63,7 @@ export default function About() {
       {/* Ques */}
       <Ques />
       {/* Banners */}
-      <Banner title="banner" />
+      <Banner title={true} />
     </section>
   );
 }

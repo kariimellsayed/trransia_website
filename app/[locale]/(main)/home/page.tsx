@@ -12,7 +12,7 @@ const page = () => {
       <Services />
       <Discus />
       <Ques />
-      <Banner />
+      <Banner title={false} />
     </main>
   );
 };
