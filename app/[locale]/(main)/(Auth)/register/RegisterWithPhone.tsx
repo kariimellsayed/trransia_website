@@ -3,8 +3,8 @@
 import { useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
-import { Link } from "@/i18n/navigation";
 import PhoneInput from "react-phone-input-2";
+import Link from "next/link";
 
 const RegisterWithPhone = () => {
   const t = useTranslations("RegisterWithPhone");

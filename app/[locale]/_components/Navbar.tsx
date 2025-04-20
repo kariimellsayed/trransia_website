@@ -59,7 +59,7 @@ const Navbar = () => {
           </button>
 
           <Link
-            href={"/landing"}
+            href={"/home"}
             className="absolute top-5 left-5 flex items-center justify-start gap-2"
           >
             <Image
@@ -100,7 +100,7 @@ const Navbar = () => {
                     align="center"
                     className="border-[0.5px] border-primary w-52"
                   >
-                    {link.children.map((child) => (
+                    {link.children?.map((child) => (
                       <DropdownMenuItem asChild key={child.key}>
                         <Link
                           href={child.href}
@@ -112,19 +112,17 @@ const Navbar = () => {
                     ))}
                   </DropdownMenuContent>
                 </DropdownMenu>
-              ) : (
+              ) : link.href ? ( // تأكد إن href موجود
                 <Link
                   key={link.key}
                   href={link.href}
-                  className={`text-lg font-normal transition-colors w-full flex justify-center px-7 py-3 rounded-xl
-                  border-1 border-primary duration-200 hover:bg-primary hover:text-white ${
-                    pathname === link.href &&
-                    "bg-primary text-white font-medium"
+                  className={`text-lg font-normal transition-colors hover:text-primary ${
+                    pathname === link.href ? "text-primary font-semibold" : ""
                   }`}
                 >
                   {t(link.key)}
                 </Link>
-              )
+              ) : null
             )}
           </nav>
 
@@ -156,7 +154,7 @@ const Navbar = () => {
 
                     <NavigationMenuContent className="p-4 bg-black rounded-xl min-w-[250px] absolute left-0 top-0 z-50">
                       <div className="flex flex-col gap-2">
-                        {link.children.map((child) => (
+                        {link.children?.map((child) => (
                           <Link
                             key={child.key}
                             href={child.href}
@@ -175,7 +173,7 @@ const Navbar = () => {
                   </NavigationMenuItem>
                 </NavigationMenuList>
               </NavigationMenu>
-            ) : (
+            ) : link.href ? ( // تأكد إن href موجود
               <Link
                 key={link.key}
                 href={link.href}
@@ -185,7 +183,7 @@ const Navbar = () => {
               >
                 {t(link.key)}
               </Link>
-            )
+            ) : null
           )}
 
           {/* Language */}

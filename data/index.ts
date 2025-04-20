@@ -1,5 +1,7 @@
+import { NavLink } from "@/types/types";
+
 // NavItems
-export const navLinks = [
+export const navLinks: NavLink[] = [
   { key: "home", href: "/home" },
   { key: "about", href: "/about" },
   { key: "customer", href: "/contact" },
@@ -10,14 +12,13 @@ export const navLinks = [
       { key: "service1", href: "/service1" },
       { key: "service2", href: "/service2" },
       { key: "service3", href: "/service3" },
-      { key: "service4", href: "/service3" },
-      { key: "service5", href: "/service3" },
-      { key: "service6", href: "/service3" },
-      { key: "service7", href: "/service3" },
-      { key: "service8", href: "/service3" },
-      { key: "service9", href: "/service3" },
+      { key: "service4", href: "/service4" },
+      { key: "service5", href: "/service5" },
+      { key: "service6", href: "/service6" },
+      { key: "service7", href: "/service7" },
+      { key: "service8", href: "/service8" },
+      { key: "service9", href: "/service9" },
     ],
-    href: "/services",
   },
 ];
 
