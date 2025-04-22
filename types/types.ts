@@ -3,7 +3,7 @@ export type ValidPathnames =
   | "/home"
   | "/about"
   | "/contact"
-  | "/service1"
+  | "/translate"
   | "/service2"
   | "/service3"
   | "/service4"

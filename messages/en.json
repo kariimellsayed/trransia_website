@@ -21,6 +21,11 @@
       "title": "Contact Us",
       "description": "Get in touch with Transia through our various branches or communication channels including phone, email, and social media. We are here to support you and answer all inquiries regarding our translation, marketing, IT services, and more.",
       "keywords": "Contact Transia, Transia Branches, Customer Support, Email, Phone Number, Support Services, Contact Info, Technical Support"
+    },
+    "translation": {
+      "title": "Certified Translation | Transia",
+      "description": "At Transia, we offer certified translation services tailored to individuals, academic institutions, and official entities. Our linguistic experts ensure accurate, high-quality translations that meet both local and international standards. From official document translations to academic research and report writing, we deliver professional content that reflects the original meaning with linguistic precision.",
+      "keywords": "Certified Translation, Document Translation, Academic Research Translation, Official Documents, Legal Translation, University Reports, Academic Writing, Transia Translation Services, Language Solutions, Professional Translation"
     }
   },
   "RegisterWithEmail": {
@@ -125,15 +130,15 @@
     "reg": "Register Now"
   },
   "Services": {
-    "serve1": "Advertising and Promotion",
-    "serve2": "Business Services",
-    "serve3": "Student Service",
-    "serve4": "Electronic Services",
-    "serve5": "Certified Translation",
-    "serve6": "Digital Marketing",
-    "serve7": "Information Technology",
-    "serve8": "Promotional Gifts",
-    "serve9": "Plotter Printer"
+    "serve1": "Certified Translation",
+    "serve2": "Student Service",
+    "serve3": "Advertising and Promotion",
+    "serve4": "Digital Marketing",
+    "serve5": "Electronic Services",
+    "serve6": "Information Technology",
+    "serve7": "Promotional Gifts",
+    "serve8": "Plotter Printer",
+    "serve9": "Business Services"
   },
   "Hero": {
     "title": "Transia",
@@ -220,5 +225,14 @@
     "ab8": "Printing blueprints using the latest technologies and with high quality to meet the needs of engineers and designers.",
     "ab9": "Electronic services that enable users to complete their transactions easily and quickly through smart digital solutions.",
     "banner": "Our Partners"
-  }
+  },
+  "Translate": {
+    "title": "Certified Translation",
+    "des": "Our Certified Translation Department provides high-quality linguistic services tailored to meet the needs of individuals, academic institutions, and official entities — all in accordance with the highest local and international professional standards.",
+    "depart": "Certified Translation Department For All Languages",
+    "office": "Our Offices Group Translates To And From The Following Languages ​​For All Domains",
+    "from": "Arabic Language To And From The Following Languages ​​In All Of Its Specialties",
+    "to": "English Language To And From The Following Languages ​​In All Of Its Specialties"
+  },
+  "Languaches": {}
 }

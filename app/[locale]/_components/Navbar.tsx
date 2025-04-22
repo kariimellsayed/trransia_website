@@ -33,7 +33,7 @@ const Navbar = () => {
 
   return (
     <header className="w-full border-b border-[0.5px] border-brandgray bg-white">
-      <div className="mx-auto flex justify-between items-center padding-x py-3">
+      <div className="mx-auto flex justify-between items-center padding-x py-1">
         {/* Logo */}
         <Link href="/home">
           <Image
@@ -47,7 +47,7 @@ const Navbar = () => {
 
         {/* Links Mobile Menu */}
         <div
-          className={`fixed bottom-0 left-0 h-full w-full bg-white transform z-20 px-6 sm:px-10 py-12 flex flex-col ${
+          className={`fixed bottom-0 left-0 h-full w-full bg-white transform z-50 px-6 sm:px-10 py-12 flex flex-col ${
             menuOpen ? "translate-y-0" : "translate-y-full"
           } transition-transform duration-300 ease-in-out lg:hidden`}
         >
@@ -119,7 +119,7 @@ const Navbar = () => {
                   className={`text-lg font-normal transition-colors w-full flex justify-center px-7 py-3 rounded-xl
                     border-1 border-primary duration-200 hover:bg-primary hover:text-white ${
                       pathname === link.href &&
-                      "bg-primary text-white font-medium"
+                      "bg-primary text-white font-semibold"
                     }`}
                   onClick={() => setMenuOpen(false)}
                 >
@@ -155,7 +155,7 @@ const Navbar = () => {
                       {t(link.key)}
                     </NavigationMenuTrigger>
 
-                    <NavigationMenuContent className="p-4 bg-black rounded-xl min-w-[250px] absolute left-0 top-0 z-50">
+                    <NavigationMenuContent className="p-4 bg-black/40 rounded-xl min-w-[250px] absolute left-0 top-0 z-50">
                       <div className="flex flex-col gap-2">
                         {link.children?.map((child) => (
                           <Link

@@ -13,13 +13,13 @@ const tajawal = Tajawal({
   subsets: ["arabic"],
   weight: ["400", "500", "700"],
   variable: "--font-tajawal",
-  preload: true,
+  // preload: true,
 });
 const inter = Inter({
   subsets: ["latin"],
   weight: ["400", "600", "700"],
   variable: "--font-inter",
-  preload: true,
+  // preload: true,
 });
 
 // Metadata
@@ -75,6 +75,7 @@ export default async function LocaleLayout({
   const direction = isArabic ? "rtl" : "ltr";
   const fontClass = isArabic ? tajawal.className : inter.className;
   inter;
+
   return (
     <html lang={locale} className={fontClass} dir={direction}>
       <body>

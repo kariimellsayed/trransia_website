@@ -18,9 +18,9 @@ export const routing = defineRouting({
       ar: "/تواصل_معنا",
     },
     // إضافة الروابط الجديدة
-    "/service1": {
-      en: "/service1",
-      ar: "/خدمة1",
+    "/translate": {
+      en: "/translate",
+      ar: "/الترجمة_المعتمدة",
     },
     "/service2": {
       en: "/service2",
