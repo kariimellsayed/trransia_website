@@ -1,4 +1,6 @@
 import { NavLink } from "@/types/types";
+// it services
+import { Code, Smartphone, LayoutTemplate, Database } from "lucide-react";
 
 // NavItems
 export const navLinks: NavLink[] = [
@@ -11,9 +13,9 @@ export const navLinks: NavLink[] = [
     children: [
       { key: "service1", href: "/translate" },
       { key: "service2", href: "/service2" },
-      { key: "service3", href: "/service3" },
-      { key: "service4", href: "/service4" },
-      { key: "service5", href: "/service5" },
+      { key: "service3", href: "/marketing" },
+      { key: "service4", href: "/tech" },
+      { key: "service5", href: "/student" },
       { key: "service6", href: "/service6" },
       { key: "service7", href: "/service7" },
       { key: "service8", href: "/service8" },
@@ -160,4 +162,30 @@ export const availableLanguages = [
   "الهندية",
   "اليابانية",
   "اليونانية",
+];
+
+// Tech Page
+
+// It services
+export const itServices = [
+  {
+    key: "it.app",
+    description: "it.appdes",
+    icon: Smartphone,
+  },
+  {
+    key: "it.web",
+    description: "it.webdes",
+    icon: Code,
+  },
+  {
+    key: "it.uiux",
+    description: "it.uiuxdes",
+    icon: LayoutTemplate,
+  },
+  {
+    key: "it.data",
+    description: "it.datades",
+    icon: Database,
+  },
 ];

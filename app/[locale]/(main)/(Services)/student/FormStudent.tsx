@@ -1,29 +1,17 @@
 "use client";
 
-import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { Textarea } from "@/components/ui/textarea";
-import { Input } from "@/components/ui/input";
-import { availableLanguages } from "@/data";
-import { Languages, FileText, StickyNote, X } from "lucide-react";
-import { useLocale } from "next-intl";
+import { FileText, X, StickyNote } from "lucide-react";
 import { toast } from "sonner";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
+import { useState } from "react";
 
-const WHATSAPP_NUMBER = "201064689587"; // 👈🏻 غيّر الرقم هنا لرقم خدمة العملاء
-
-const FormTranslate = () => {
+const FormStudent = () => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
-  const [sourceLang, setSourceLang] = useState<string | null>(null);
-  const [targetLang, setTargetLang] = useState<string | null>(null);
   const [notes, setNotes] = useState<string>("");
-  const locale = useLocale();
+
+  const WHATSAPP_NUMBER = "201064689587"; // 👈🏻 غيّر الرقم هنا لرقم خدمة العملاء
 
   // Change in File
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -37,23 +25,9 @@ const FormTranslate = () => {
     setSelectedFile(null);
   };
 
-  const handleSourceLangChange = (value: string) => {
-    setSourceLang(value);
-    if (targetLang === value) setTargetLang(null);
-  };
-
-  const filteredTargetLanguages = availableLanguages.filter(
-    (lang) => lang !== sourceLang
-  );
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-
-    if (!sourceLang || !targetLang) {
-      toast.error("من فضلك اختر اللغات المطلوبة.");
-      return;
-    }
-
+    // null File
     if (!selectedFile) {
       toast.error("الرجاء إرفاق ملف للترجمة.");
       return;
@@ -69,30 +43,25 @@ const FormTranslate = () => {
       minute: "numeric",
     });
 
-    const message = `📬 *طلب ترجمة جديد*
-  
-  🕒 *التاريخ والوقت:* ${now}
-  
-  🌐 *من اللغة:* ${sourceLang}
-  🌐 *إلى اللغة:* ${targetLang}
-  📝 *ملاحظات العميل:*
-  ${notes.trim() !== "" ? `- ${notes}` : "- لا توجد ملاحظات"}
-  
-  📁 *الملف تم إرفاقه بواسطة العميل وسيتم إرساله لكم عند التأكيد.*
-  
-  📞 برجاء مراجعة البيانات والتواصل مع العميل في أقرب وقت ممكن.
-  
-  🔒 *جميع البيانات سرية وتحتفظ بها إدارة المنصة فقط.*`;
+    const message = `📬 *خدمة طالب*
+      
+      🕒 *التاريخ والوقت:* ${now}
+      
+
+      📝 *ملاحظات العميل:*
+      ${notes.trim() !== "" ? `- ${notes}` : "- لا توجد ملاحظات"}
+      
+      📁 *الملف تم إرفاقه بواسطة العميل وسيتم إرساله لكم عند التأكيد.*
+      
+      📞 برجاء مراجعة البيانات والتواصل مع العميل في أقرب وقت ممكن.
+      
+      🔒 *جميع البيانات سرية وتحتفظ بها إدارة المنصة فقط.*`;
 
     const encodedMessage = encodeURIComponent(message);
     const whatsappLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
 
     window.open(whatsappLink, "_blank");
     toast.success("تم تجهيز الرسالة بنجاح! سيتم فتح واتساب الآن.");
-
-    setSourceLang("");
-    setTargetLang("");
-    setSelectedFile(null);
   };
 
   return (
@@ -101,58 +70,10 @@ const FormTranslate = () => {
       mx-auto mt-10 animate-slideIn"
     >
       <form className="space-y-6" onSubmit={handleSubmit}>
-        {/* اللغة المصدر */}
-        <div className="animate-slideIn delay-100">
-          <label className="flex items-center gap-2 font-semibold mb-1">
-            من
-            <Languages className="w-4 h-4 text-brandred" />
-          </label>
-          <Select
-            onValueChange={handleSourceLangChange}
-            value={sourceLang || ""}
-            dir={locale === "ar" ? "rtl" : "ltr"}
-          >
-            <SelectTrigger className="w-full rounded-lg">
-              <SelectValue placeholder="اختر اللغة" />
-            </SelectTrigger>
-            <SelectContent>
-              {availableLanguages.map((lang) => (
-                <SelectItem key={lang} value={lang}>
-                  {lang}
-                </SelectItem>
-              ))}
-            </SelectContent>
-          </Select>
-        </div>
-
-        {/* اللغة الهدف */}
-        <div className="animate-slideIn delay-200">
-          <label className="flex items-center gap-2 font-semibold mb-1">
-            إلى
-            <Languages className="w-4 h-4 text-brandred" />
-          </label>
-          <Select
-            onValueChange={(value) => setTargetLang(value)}
-            value={targetLang || ""}
-            dir={locale === "ar" ? "rtl" : "ltr"}
-          >
-            <SelectTrigger className="w-full rounded-lg">
-              <SelectValue placeholder="اختر اللغة" />
-            </SelectTrigger>
-            <SelectContent>
-              {filteredTargetLanguages.map((lang) => (
-                <SelectItem key={lang} value={lang}>
-                  {lang}
-                </SelectItem>
-              ))}
-            </SelectContent>
-          </Select>
-        </div>
-
         {/* رفع ملف */}
         <div className="animate-slideIn delay-300">
           <label className="flex items-center gap-2 font-semibold mb-1">
-            رفع ملف
+            ارفع ملف
             <FileText className="w-4 h-4 text-brandred" />
           </label>
           <div className="relative">
@@ -188,7 +109,7 @@ const FormTranslate = () => {
           </div>
         </div>
 
-        {/* ملاحظات */}
+        {/* Message */}
         <div className="animate-slideIn delay-400">
           <label className="flex items-center gap-2 font-semibold mb-1">
             الملاحظات (اختياري)
@@ -218,4 +139,4 @@ const FormTranslate = () => {
   );
 };
 
-export default FormTranslate;
+export default FormStudent;

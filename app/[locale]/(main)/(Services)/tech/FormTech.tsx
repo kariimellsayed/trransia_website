@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
   Select,
@@ -11,148 +11,105 @@ import {
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { Input } from "@/components/ui/input";
-import { availableLanguages } from "@/data";
-import { Languages, FileText, StickyNote, X } from "lucide-react";
-import { useLocale } from "next-intl";
+import { FileText, StickyNote, X } from "lucide-react";
 import { toast } from "sonner";
+import { useLocale, useTranslations } from "next-intl";
 
-const WHATSAPP_NUMBER = "201064689587"; // 👈🏻 غيّر الرقم هنا لرقم خدمة العملاء
+// لستة خدمات تقنية المعلومات
+const itServices = ["app", "web", "uiux", "data"];
 
-const FormTranslate = () => {
+const FormTech = () => {
+  const [serviceType, setServiceType] = useState<string>("");
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
-  const [sourceLang, setSourceLang] = useState<string | null>(null);
-  const [targetLang, setTargetLang] = useState<string | null>(null);
   const [notes, setNotes] = useState<string>("");
+  const t = useTranslations("Tech.it");
   const locale = useLocale();
 
-  // Change in File
+  // التعامل مع رفع الملف
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files.length > 0) {
       setSelectedFile(e.target.files[0]);
     }
   };
 
-  // Remove File
+  // التعامل مع إزالة الملف
   const handleRemoveFile = () => {
     setSelectedFile(null);
   };
 
-  const handleSourceLangChange = (value: string) => {
-    setSourceLang(value);
-    if (targetLang === value) setTargetLang(null);
-  };
-
-  const filteredTargetLanguages = availableLanguages.filter(
-    (lang) => lang !== sourceLang
-  );
-
+  // التعامل مع إرسال الفورم
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (!sourceLang || !targetLang) {
-      toast.error("من فضلك اختر اللغات المطلوبة.");
+    // تحقق بسيط: نوع الخدمة مطلوب
+    if (!serviceType) {
+      toast.error("من فضلك اختر الخدمة المطلوبة.");
       return;
     }
 
-    if (!selectedFile) {
-      toast.error("الرجاء إرفاق ملف للترجمة.");
-      return;
-    }
+    // إذا كل شيء صحيح، بنكوّن رسالة واتساب
+    const message = `
+طلب خدمة تقنية معلومات جديد:
+- نوع الخدمة: ${serviceType}
+${selectedFile ? `- ملف مرفق: ${selectedFile.name}` : ""}
+${notes ? `- الملاحظات: ${notes}` : ""}
+    `.trim();
 
-    const now = new Date().toLocaleString("ar-SA", {
-      timeZone: "Asia/Riyadh", // ✅ توقيت السعودية
-      weekday: "long",
-      year: "numeric",
-      month: "long",
-      day: "numeric",
-      hour: "numeric",
-      minute: "numeric",
-    });
+    // كوّن رابط واتساب
+    const whatsappNumber = "201064689587"; // ضع رقم واتساب هنا مع كود الدولة بدون +
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+      message
+    )}`;
 
-    const message = `📬 *طلب ترجمة جديد*
-  
-  🕒 *التاريخ والوقت:* ${now}
-  
-  🌐 *من اللغة:* ${sourceLang}
-  🌐 *إلى اللغة:* ${targetLang}
-  📝 *ملاحظات العميل:*
-  ${notes.trim() !== "" ? `- ${notes}` : "- لا توجد ملاحظات"}
-  
-  📁 *الملف تم إرفاقه بواسطة العميل وسيتم إرساله لكم عند التأكيد.*
-  
-  📞 برجاء مراجعة البيانات والتواصل مع العميل في أقرب وقت ممكن.
-  
-  🔒 *جميع البيانات سرية وتحتفظ بها إدارة المنصة فقط.*`;
+    // افتح رابط واتساب في نافذة جديدة
+    window.open(whatsappUrl, "_blank");
 
-    const encodedMessage = encodeURIComponent(message);
-    const whatsappLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
-
-    window.open(whatsappLink, "_blank");
+    // عرض رسالة نجاح
     toast.success("تم تجهيز الرسالة بنجاح! سيتم فتح واتساب الآن.");
 
-    setSourceLang("");
-    setTargetLang("");
+    // إعادة تعيين الفورم بعد الإرسال
+    setServiceType("");
     setSelectedFile(null);
+    setNotes("");
   };
 
   return (
     <div
       className="relative bg-white/90 backdrop-blur-md border p-8 rounded-xl shadow-xl shadow-primary/30 w-full max-w-4xl
       mx-auto mt-10 animate-slideIn"
+      id="it-services"
     >
-      <form className="space-y-6" onSubmit={handleSubmit}>
-        {/* اللغة المصدر */}
+      <form onSubmit={handleSubmit} className="space-y-6">
+        {/* نوع الخدمة */}
         <div className="animate-slideIn delay-100">
-          <label className="flex items-center gap-2 font-semibold mb-1">
-            من
-            <Languages className="w-4 h-4 text-brandred" />
+          <label
+            className="flex items-center gap-2 font-semibold mb-1"
+            htmlFor="serviceType"
+          >
+            نوع الخدمة
           </label>
           <Select
-            onValueChange={handleSourceLangChange}
-            value={sourceLang || ""}
+            onValueChange={(value) => setServiceType(value)}
+            value={serviceType}
             dir={locale === "ar" ? "rtl" : "ltr"}
           >
-            <SelectTrigger className="w-full rounded-lg">
-              <SelectValue placeholder="اختر اللغة" />
+            <SelectTrigger id="serviceType" className="w-full rounded-lg">
+              <SelectValue placeholder="اختر نوع الخدمة" />
             </SelectTrigger>
             <SelectContent>
-              {availableLanguages.map((lang) => (
-                <SelectItem key={lang} value={lang}>
-                  {lang}
+              {itServices.map((service) => (
+                <SelectItem key={service} value={service}>
+                  {t(service)}
                 </SelectItem>
               ))}
             </SelectContent>
           </Select>
         </div>
 
-        {/* اللغة الهدف */}
-        <div className="animate-slideIn delay-200">
-          <label className="flex items-center gap-2 font-semibold mb-1">
-            إلى
-            <Languages className="w-4 h-4 text-brandred" />
-          </label>
-          <Select
-            onValueChange={(value) => setTargetLang(value)}
-            value={targetLang || ""}
-            dir={locale === "ar" ? "rtl" : "ltr"}
-          >
-            <SelectTrigger className="w-full rounded-lg">
-              <SelectValue placeholder="اختر اللغة" />
-            </SelectTrigger>
-            <SelectContent>
-              {filteredTargetLanguages.map((lang) => (
-                <SelectItem key={lang} value={lang}>
-                  {lang}
-                </SelectItem>
-              ))}
-            </SelectContent>
-          </Select>
-        </div>
-
-        {/* رفع ملف */}
+        {/* رفع ملف (اختياري) */}
         <div className="animate-slideIn delay-300">
           <label className="flex items-center gap-2 font-semibold mb-1">
-            رفع ملف
+            رفع ملف (اختياري)
             <FileText className="w-4 h-4 text-brandred" />
           </label>
           <div className="relative">
@@ -188,7 +145,7 @@ const FormTranslate = () => {
           </div>
         </div>
 
-        {/* ملاحظات */}
+        {/* الملاحظات (اختياري) */}
         <div className="animate-slideIn delay-400">
           <label className="flex items-center gap-2 font-semibold mb-1">
             الملاحظات (اختياري)
@@ -203,12 +160,12 @@ const FormTranslate = () => {
           />
         </div>
 
-        {/* زر التنفيذ */}
+        {/* الزرار */}
         <div className="animate-slideIn delay-500">
           <Button
             type="submit"
             className="w-full bg-primary hover:bg-red-600 transition-all duration-200 rounded-xl font-semibold
-             cursor-pointer"
+                    cursor-pointer"
           >
             تنفيذ الطلب
           </Button>
@@ -218,4 +175,4 @@ const FormTranslate = () => {
   );
 };
 
-export default FormTranslate;
+export default FormTech;

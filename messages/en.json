@@ -234,5 +234,39 @@
     "from": "Arabic Language To And From The Following Languages ​​In All Of Its Specialties",
     "to": "English Language To And From The Following Languages ​​In All Of Its Specialties"
   },
+  "Student": {
+    "title": "Student Services",
+    "des": "Our Student Services Department offers exceptional support designed to assist you in every aspect of your academic journey.",
+    "our": "Our services include",
+    "our1": "Academic Document & Research Design: Need to design an academic document or a standout research paper? We provide professional design services that align with university standards.",
+    "our2": "Official Document Translation: We offer accurate and reliable translation for official documents, ensuring the original meaning is preserved.",
+    "our3": "University Research & Report Writing: Whether you need help writing a research paper or a university report, we deliver high-quality academic content, ready for submission, and always on time.",
+    "end": "We are here to provide you with the best support throughout your academic path, helping you achieve your educational goals with ease and professionalism."
+  },
+  "Marketing": {
+    "title": "Digital Marketing",
+    "des": "Presence in the market and increase awareness among your target audience through a well-planned, professional approach.",
+    "our": "Our services include",
+    "our1": "Social Media Account Management",
+    "our2": "Paid Advertising Campaigns",
+    "our3": "Search Engine Optimization (SEO)",
+    "our4": "Visual Identity & Content Design",
+    "end": "We believe that successful digital marketing starts with a deep understanding of the client's needs and ends with a powerful, lasting impact in the market."
+  },
+  "Tech": {
+    "title": "Information Technology",
+    "des": "Our Tech Department offers integrated digital solutions that keep pace with market developments and support growth strategies by leveraging technology to enhance digital presence and achieve marketing goals.",
+    "order": "Order your service now",
+    "it": {
+      "app": "Application development",
+      "web": "Web development",
+      "uiux": "UiUX",
+      "data": "Data analysis",
+      "appdes": "We provide professional mobile applications that meet your business needs with the latest technologies.",
+      "webdes": "We design and develop responsive and fast websites to enhance your digital presence.",
+      "uiuxdes": "We design engaging user interfaces and seamless user experiences for your digital products.",
+      "datades": "We analyze your data to extract valuable insights that support your strategic decisions."
+    }
+  },
   "Languaches": {}
 }

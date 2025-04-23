@@ -55,11 +55,11 @@ const Translate = () => {
         {/* Languaches */}
         <div className="flex flex-col items-start gap-8">
           <h2 className="head-color sm:text-3xl text-2xl font-bold">
-            {t("office")}
+            {t("office")}:
           </h2>
 
           <p className="sm:text-xl text-lg text-brandblack font-medium">
-            {t("depart")}
+            {t("depart")}:
           </p>
 
           <ul className="list-disc list-inside space-y-2">

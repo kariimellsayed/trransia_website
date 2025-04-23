@@ -5,9 +5,9 @@ export type ValidPathnames =
   | "/contact"
   | "/translate"
   | "/service2"
-  | "/service3"
-  | "/service4"
-  | "/service5"
+  | "/marketing"
+  | "/tech"
+  | "/student"
   | "/service6"
   | "/service7"
   | "/service8"
@@ -19,3 +19,9 @@ export interface NavLink {
   dropdown?: boolean;
   children?: { key: string; href: ValidPathnames }[];
 }
+
+// export interface it {
+//   key: string;
+//   description: string;
+//   icon: any;
+// }

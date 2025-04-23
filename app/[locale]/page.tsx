@@ -46,19 +46,14 @@ const Teaser = () => {
       <div className="flex justify-center animate-fadeInUp mt-10">
         <Link
           href="/register"
-          className="w-full max-w-md flex items-center flex-col md:flex-row justify-center gap-4 py-2 px-6 bg-white rounded-2xl
+          className="w-full max-w-4xl flex items-center flex-col md:flex-row justify-between gap-4 py-2 px-6 bg-white rounded-2xl
            shadow-lg shadow-primary hover:scale-90 transition-all duration-300 border border-gray-200"
         >
-          {/* Logo & Percentage */}
-          {/* <div className="flex items-center">
-            <Image
-              src="/teaser-logo.svg"
-              alt="Transia Logo"
-              width={60}
-              height={60}
-              className="object-contain"
-            />
-          </div> */}
+          {/* Offer Texts */}
+          <div className="flex flex-col md:items-end items-center gap-1">
+            <p className="text-sm text-gray-600">{t("offer")}</p>
+            <p className="text-base font-semibold">{t("descount")}</p>
+          </div>
           <div className="flex items-center">
             <Image
               src="/50.webp"
@@ -68,11 +63,7 @@ const Teaser = () => {
               className="object-contain sm:w-32 sm:h-32 w-24 h-24"
             />
           </div>
-
-          {/* Offer Texts */}
-          <div className="flex flex-col md:items-end items-center gap-1">
-            <p className="text-sm text-gray-600">{t("offer")}</p>
-            <p className="text-base font-semibold">{t("descount")}</p>
+          <div className="flex items-center">
             <p className="text-xl font-bold text-primary">{t("reg")}</p>
           </div>
         </Link>

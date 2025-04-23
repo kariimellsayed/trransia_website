@@ -26,17 +26,17 @@ export const routing = defineRouting({
       en: "/service2",
       ar: "/خدمة2",
     },
-    "/service3": {
-      en: "/service3",
-      ar: "/خدمة3",
+    "/marketing": {
+      en: "/marketing",
+      ar: "/تسويق_الكتروني",
     },
-    "/service4": {
-      en: "/service4",
-      ar: "/خدمة4",
+    "/tech": {
+      en: "/tech",
+      ar: "/تقنية_المعلومات",
     },
-    "/service5": {
-      en: "/service5",
-      ar: "/خدمة5",
+    "/student": {
+      en: "/student",
+      ar: "/خدمة_طالب",
     },
     "/service6": {
       en: "/service6",

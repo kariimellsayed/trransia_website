@@ -24,6 +24,7 @@ import {
 } from "@/components/ui/navigation-menu";
 
 import LanguageSwitcher from "./ui/LanguageSwitcher";
+import CustomDropdownMenu from "./ui/CustomDropdown";
 
 const Navbar = () => {
   const t = useTranslations("Navbar");
@@ -141,41 +142,11 @@ const Navbar = () => {
         <nav className="hidden lg:flex gap-7 items-center">
           {navLinks.map((link) =>
             link.dropdown ? (
-              <NavigationMenu
+              <CustomDropdownMenu
                 key={link.key}
-                className="relative"
-                dir={locale === "ar" ? "rtl" : "ltr"}
-              >
-                <NavigationMenuList>
-                  <NavigationMenuItem>
-                    <NavigationMenuTrigger
-                      className="relative text-lg font-normal px-0 mx-0 flex items-center gap-2 transition-colors duration-200
-                      data-[state=open]:!bg-transparent data-[state=open]:text-primary data-[state=open]:font-semibold hover:!bg-transparent"
-                    >
-                      {t(link.key)}
-                    </NavigationMenuTrigger>
-
-                    <NavigationMenuContent className="p-4 bg-black/40 rounded-xl min-w-[250px] absolute left-0 top-0 z-50">
-                      <div className="flex flex-col gap-2">
-                        {link.children?.map((child) => (
-                          <Link
-                            key={child.key}
-                            href={child.href}
-                            className={`block px-4 py-2 rounded-lg text-base w-full font-semibold transition-all duration-200 text-center
-                            ${
-                              pathname === child.href
-                                ? "bg-primary text-white"
-                                : "bg-white text-brandblack hover:bg-primary hover:text-white"
-                            }`}
-                          >
-                            {t(child.key)}
-                          </Link>
-                        ))}
-                      </div>
-                    </NavigationMenuContent>
-                  </NavigationMenuItem>
-                </NavigationMenuList>
-              </NavigationMenu>
+                label={link.key}
+                links={link.children}
+              />
             ) : link.href ? ( // تأكد إن href موجود
               <Link
                 key={link.key}
