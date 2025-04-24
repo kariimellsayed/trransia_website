@@ -10,8 +10,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
-import { Input } from "@/components/ui/input";
-import { FileText, StickyNote, X } from "lucide-react";
+import { StickyNote, X } from "lucide-react";
 import { toast } from "sonner";
 import { useLocale, useTranslations } from "next-intl";
 
@@ -20,22 +19,9 @@ const itServices = ["app", "web", "uiux", "data"];
 
 const FormTech = () => {
   const [serviceType, setServiceType] = useState<string>("");
-  const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [notes, setNotes] = useState<string>("");
   const t = useTranslations("Tech.it");
   const locale = useLocale();
-
-  // التعامل مع رفع الملف
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files && e.target.files.length > 0) {
-      setSelectedFile(e.target.files[0]);
-    }
-  };
-
-  // التعامل مع إزالة الملف
-  const handleRemoveFile = () => {
-    setSelectedFile(null);
-  };
 
   // التعامل مع إرسال الفورم
   const handleSubmit = (e: React.FormEvent) => {
@@ -51,7 +37,6 @@ const FormTech = () => {
     const message = `
 طلب خدمة تقنية معلومات جديد:
 - نوع الخدمة: ${serviceType}
-${selectedFile ? `- ملف مرفق: ${selectedFile.name}` : ""}
 ${notes ? `- الملاحظات: ${notes}` : ""}
     `.trim();
 
@@ -69,7 +54,6 @@ ${notes ? `- الملاحظات: ${notes}` : ""}
 
     // إعادة تعيين الفورم بعد الإرسال
     setServiceType("");
-    setSelectedFile(null);
     setNotes("");
   };
 
@@ -77,7 +61,7 @@ ${notes ? `- الملاحظات: ${notes}` : ""}
     <div
       className="relative bg-white/90 backdrop-blur-md border p-8 rounded-xl shadow-xl shadow-primary/30 w-full max-w-4xl
       mx-auto mt-10 animate-slideIn"
-      id="it-services"
+      id="tech"
     >
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* نوع الخدمة */}
@@ -98,7 +82,11 @@ ${notes ? `- الملاحظات: ${notes}` : ""}
             </SelectTrigger>
             <SelectContent>
               {itServices.map((service) => (
-                <SelectItem key={service} value={service}>
+                <SelectItem
+                  key={service}
+                  value={service}
+                  className="text-base font-semibold"
+                >
                   {t(service)}
                 </SelectItem>
               ))}
@@ -106,46 +94,6 @@ ${notes ? `- الملاحظات: ${notes}` : ""}
           </Select>
         </div>
 
-        {/* رفع ملف (اختياري) */}
-        <div className="animate-slideIn delay-300">
-          <label className="flex items-center gap-2 font-semibold mb-1">
-            رفع ملف (اختياري)
-            <FileText className="w-4 h-4 text-brandred" />
-          </label>
-          <div className="relative">
-            {selectedFile ? (
-              <div className="w-full px-4 py-2 bg-gray-100 rounded-lg flex items-center justify-between">
-                <div className="flex items-center gap-2">
-                  <FileText className="w-4 h-4 text-brandred" />
-                  <span>{selectedFile.name}</span>
-                </div>
-                <button
-                  type="button"
-                  onClick={handleRemoveFile}
-                  className="text-brandred"
-                >
-                  <X className="w-4 h-4" />
-                </button>
-              </div>
-            ) : (
-              <>
-                <Input
-                  id="file-upload"
-                  type="file"
-                  accept=".pdf,.doc,.docx,.ppt,.pptx,.png,.jpg,.jpeg,.txt"
-                  className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
-                  onChange={handleFileChange}
-                />
-                <div className="w-full px-4 py-2 bg-gray-100 rounded-lg flex items-center gap-2">
-                  <FileText className="w-4 h-4 text-brandred" />
-                  اختر ملف
-                </div>
-              </>
-            )}
-          </div>
-        </div>
-
-        {/* الملاحظات (اختياري) */}
         <div className="animate-slideIn delay-400">
           <label className="flex items-center gap-2 font-semibold mb-1">
             الملاحظات (اختياري)
@@ -155,7 +103,8 @@ ${notes ? `- الملاحظات: ${notes}` : ""}
             rows={4}
             value={notes}
             onChange={(e) => setNotes(e.target.value)}
-            className="w-full resize-none rounded-lg"
+            className="w-full resize-none rounded-lg transition-all duration-200 hover:shadow-sm
+             hover:shadow-primary"
             placeholder="أضف أي ملاحظات إضافية هنا..."
           />
         </div>

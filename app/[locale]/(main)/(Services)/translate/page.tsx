@@ -41,20 +41,39 @@ const Translate = () => {
       {/* Content */}
       <section className="relative z-20 w-full flex flex-col gap-10">
         {/* Texts */}
-        <div className="flex flex-col items-start gap-8">
-          <h1 className="head-color sm:text-3xl text-2xl font-bold">
+        <div className="flex flex-col items-start gap-6 w-full animate-slideIn">
+          <h1 className="text-primary sm:text-4xl text-3xl font-bold">
             {t("title")}
           </h1>
-          <p className="sm:text-xl text-lg text-brandblack font-medium">
+          <p className="sm:text-xl text-lg text-brandblack leading-8 font-medium">
             {t("des")}
           </p>
+
+          <div className="flex gap-4">
+            <a
+              href="#trans"
+              className="bg-primary hover:bg-red-600 text-white font-semibold py-3 px-8 rounded-full
+                 transition-all duration-300 shadow-md hover:shadow-lg hover:shadow-primary/20 animate-slideIn"
+            >
+              {t("order")}
+            </a>
+            <a
+              href="https://wa.me/201234567890"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border border-primary text-primary hover:bg-primary hover:text-white
+                 font-semibold py-3 px-8 rounded-full transition-all duration-300 animate-slideIn"
+            >
+              {t("contact")}
+            </a>
+          </div>
         </div>
         {/* Form */}
         <FormTranslate />
 
         {/* Languaches */}
         <div className="flex flex-col items-start gap-8">
-          <h2 className="head-color sm:text-3xl text-2xl font-bold">
+          <h2 className="head-color sm:text-3xl text-2xl leading-relaxed font-bold">
             {t("office")}:
           </h2>
 

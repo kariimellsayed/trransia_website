@@ -1,6 +1,7 @@
 import { services } from "@/data";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import Link from "next/link";
 
 const ServicesGrid = () => {
   const t = useTranslations("Services");
@@ -14,7 +15,8 @@ const ServicesGrid = () => {
             : "md:col-span-1";
 
         return (
-          <div
+          <Link
+            href={service.href ? service.href : "#"}
             key={service.key}
             className={`bg-white border-[0.5px] border-red-300 shadow-2xl rounded-4xl p-4 flex flex-col items-center
                  justify-center duration-200 hover:scale-105 z-10 ${spanClass} animate-fadeInUp`}
@@ -29,7 +31,7 @@ const ServicesGrid = () => {
             <h4 className="text-brandblack text-center text-lg font-semibold">
               {t(`${service.key}`)}
             </h4>
-          </div>
+          </Link>
         );
       })}
     </div>

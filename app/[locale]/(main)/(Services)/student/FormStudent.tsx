@@ -66,8 +66,9 @@ const FormStudent = () => {
 
   return (
     <div
+      id="student"
       className="relative bg-white/90 backdrop-blur-md border p-8 rounded-xl shadow-xl shadow-primary/30 w-full max-w-4xl
-      mx-auto mt-10 animate-slideIn"
+      mx-auto animate-slideIn"
     >
       <form className="space-y-6" onSubmit={handleSubmit}>
         {/* رفع ملف */}
@@ -109,7 +110,6 @@ const FormStudent = () => {
           </div>
         </div>
 
-        {/* Message */}
         <div className="animate-slideIn delay-400">
           <label className="flex items-center gap-2 font-semibold mb-1">
             الملاحظات (اختياري)
@@ -119,7 +119,8 @@ const FormStudent = () => {
             rows={4}
             value={notes}
             onChange={(e) => setNotes(e.target.value)}
-            className="w-full resize-none rounded-lg"
+            className="w-full resize-none rounded-lg transition-all duration-200 hover:shadow-sm
+                 hover:shadow-primary"
             placeholder="أضف أي ملاحظات إضافية هنا..."
           />
         </div>

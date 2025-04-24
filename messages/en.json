@@ -26,6 +26,21 @@
       "title": "Certified Translation | Transia",
       "description": "At Transia, we offer certified translation services tailored to individuals, academic institutions, and official entities. Our linguistic experts ensure accurate, high-quality translations that meet both local and international standards. From official document translations to academic research and report writing, we deliver professional content that reflects the original meaning with linguistic precision.",
       "keywords": "Certified Translation, Document Translation, Academic Research Translation, Official Documents, Legal Translation, University Reports, Academic Writing, Transia Translation Services, Language Solutions, Professional Translation"
+    },
+    "marketing": {
+      "title": "Digital Marketing | Transia",
+      "description": "Boost your digital presence with Transia’s digital marketing services! We offer innovative solutions in social media management, digital advertising, content writing, SEO, and visual identity design to achieve your marketing goals successfully.",
+      "keywords": "Digital Marketing, Social Media Management, Digital Advertising, Content Writing, Search Engine Optimization, SEO, Visual Identity Design, Digital Marketing Services, Transia, Marketing Solutions"
+    },
+    "student": {
+      "title": "Professional Student Services | Transia",
+      "description": "Support your academic journey with Transia’s student services! We offer academic research writing, presentation preparation, and engineering blueprint printing with high quality for university students.",
+      "keywords": "Student Services, Academic Research Writing, Presentation Preparation, Engineering Blueprint Printing, Academic Support, University Student Services, Transia, Student Solutions"
+    },
+    "tech": {
+      "title": "IT Services | Transia",
+      "description": "Innovative IT solutions from Transia! We provide website development, app design, and technical support services for businesses and individuals to enhance your tech performance efficiently.",
+      "keywords": "IT Services, Website Development, App Design, Technical Support, Tech Services, IT Solutions, Transia, IT Support"
     }
   },
   "RegisterWithEmail": {
@@ -228,7 +243,9 @@
   },
   "Translate": {
     "title": "Certified Translation",
-    "des": "Our Certified Translation Department provides high-quality linguistic services tailored to meet the needs of individuals, academic institutions, and official entities — all in accordance with the highest local and international professional standards.",
+    "des": "At Transia, we elevate certified translation services to new heights of professionalism and precision, catering to the needs of individuals, academic institutions, and official entities with unparalleled quality. Our translations are accredited locally and internationally, ensuring results that exceed expectations. Backed by our exceptional team of professional translators—who bring extensive expertise and a passion for delivering the finest linguistic experience—we stand as the premier choice for anyone seeking excellence in the world of translation.",
+    "contact": "Contact Us",
+    "order": "Order your service now",
     "depart": "Certified Translation Department For All Languages",
     "office": "Our Offices Group Translates To And From The Following Languages ​​For All Domains",
     "from": "Arabic Language To And From The Following Languages ​​In All Of Its Specialties",
@@ -237,6 +254,8 @@
   "Student": {
     "title": "Student Services",
     "des": "Our Student Services Department offers exceptional support designed to assist you in every aspect of your academic journey.",
+    "contact": "Contact Us",
+    "order": "Order your service now",
     "our": "Our services include",
     "our1": "Academic Document & Research Design: Need to design an academic document or a standout research paper? We provide professional design services that align with university standards.",
     "our2": "Official Document Translation: We offer accurate and reliable translation for official documents, ensuring the original meaning is preserved.",
@@ -245,17 +264,38 @@
   },
   "Marketing": {
     "title": "Digital Marketing",
-    "des": "Presence in the market and increase awareness among your target audience through a well-planned, professional approach.",
+    "des": "At Transia, we elevate your brand’s success with innovative digital marketing services, tailored to enhance your online presence, engage your target audience, and achieve your marketing goals through advanced strategies that deliver tangible results.",
+    "contact": "Contact Us",
+    "order": "Order your service now",
     "our": "Our services include",
     "our1": "Social Media Account Management",
     "our2": "Paid Advertising Campaigns",
     "our3": "Search Engine Optimization (SEO)",
     "our4": "Visual Identity & Content Design",
-    "end": "We believe that successful digital marketing starts with a deep understanding of the client's needs and ends with a powerful, lasting impact in the market."
+    "end": "We believe that successful digital marketing starts with a deep understanding of the client's needs and ends with a powerful, lasting impact in the market.",
+    "cards": {
+      "social": "Social Media Management",
+      "ads": "Digital Advertising",
+      "content": "Content writing",
+      "seo": "Search Engine Optimization (SEO)",
+      "socialdes": "Professional management of your social media accounts to enhance your digital presence.",
+      "addes": "Targeted advertising campaigns on Google and social media to achieve the best results.",
+      "contentdes": "Creative and engaging content that enhances your brand identity and attracts your customers.",
+      "seodes": "Optimize your website to rank higher in search results and increase visitors and sales."
+    },
+    "benefits": {
+      "1": "Extensive Experience",
+      "2": "Guaranteed Results",
+      "3": "Continuous Support",
+      "1des": "Our team has extensive experience in all types of digital marketing.",
+      "2des": "We achieve your marketing goals with effective and targeted strategies.",
+      "3des": "We provide ongoing support to ensure the success of your marketing campaigns."
+    }
   },
   "Tech": {
     "title": "Information Technology",
     "des": "Our Tech Department offers integrated digital solutions that keep pace with market developments and support growth strategies by leveraging technology to enhance digital presence and achieve marketing goals.",
+    "contact": "Contact Us",
     "order": "Order your service now",
     "it": {
       "app": "Application development",
@@ -266,7 +306,11 @@
       "webdes": "We design and develop responsive and fast websites to enhance your digital presence.",
       "uiuxdes": "We design engaging user interfaces and seamless user experiences for your digital products.",
       "datades": "We analyze your data to extract valuable insights that support your strategic decisions."
-    }
+    },
+    "our": "Our services include",
+    "our1": "Effective Product & Service Promotion: Utilizing modern digital channels and well-planned campaigns to promote offerings efficiently.",
+    "our2": "Brand Awareness & Digital Identity Building: Creating a unique and consistent digital identity that strengthens your brand recognition.",
+    "our3": "Customer Acquisition Through Smart Strategies: Attracting new customers using technology-driven strategies supported by precise analytics and user behavior insights."
   },
   "Languaches": {}
 }

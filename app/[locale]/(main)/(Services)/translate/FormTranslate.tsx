@@ -97,6 +97,7 @@ const FormTranslate = () => {
 
   return (
     <div
+      id="trans"
       className="relative bg-white/90 backdrop-blur-md border p-8 rounded-xl shadow-xl shadow-primary/30 w-full max-w-4xl
       mx-auto mt-10 animate-slideIn"
     >
@@ -112,12 +113,19 @@ const FormTranslate = () => {
             value={sourceLang || ""}
             dir={locale === "ar" ? "rtl" : "ltr"}
           >
-            <SelectTrigger className="w-full rounded-lg">
+            <SelectTrigger
+              className="w-full rounded-lg transition-all duration-200 hover:shadow-sm
+             hover:shadow-primary"
+            >
               <SelectValue placeholder="اختر اللغة" />
             </SelectTrigger>
             <SelectContent>
               {availableLanguages.map((lang) => (
-                <SelectItem key={lang} value={lang}>
+                <SelectItem
+                  key={lang}
+                  value={lang}
+                  className="text-base font-semibold"
+                >
                   {lang}
                 </SelectItem>
               ))}
@@ -136,12 +144,19 @@ const FormTranslate = () => {
             value={targetLang || ""}
             dir={locale === "ar" ? "rtl" : "ltr"}
           >
-            <SelectTrigger className="w-full rounded-lg">
+            <SelectTrigger
+              className="w-full rounded-lg transition-all duration-200 hover:shadow-sm
+              hover:shadow-primary"
+            >
               <SelectValue placeholder="اختر اللغة" />
             </SelectTrigger>
             <SelectContent>
               {filteredTargetLanguages.map((lang) => (
-                <SelectItem key={lang} value={lang}>
+                <SelectItem
+                  key={lang}
+                  value={lang}
+                  className="text-base font-semibold"
+                >
                   {lang}
                 </SelectItem>
               ))}
@@ -198,7 +213,8 @@ const FormTranslate = () => {
             rows={4}
             value={notes}
             onChange={(e) => setNotes(e.target.value)}
-            className="w-full resize-none rounded-lg"
+            className="w-full resize-none rounded-lg transition-all duration-200 hover:shadow-sm
+              hover:shadow-primary"
             placeholder="أضف أي ملاحظات إضافية هنا..."
           />
         </div>

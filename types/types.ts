@@ -14,14 +14,9 @@ export type ValidPathnames =
   | "/service9";
 
 export interface NavLink {
-  key: string;
+  key?: string;
   href?: ValidPathnames;
+  img?: string;
   dropdown?: boolean;
   children?: { key: string; href: ValidPathnames }[];
 }
-
-// export interface it {
-//   key: string;
-//   description: string;
-//   icon: any;
-// }

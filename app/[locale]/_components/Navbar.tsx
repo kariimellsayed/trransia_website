@@ -14,15 +14,6 @@ import {
   DropdownMenuItem,
 } from "@/components/ui/dropdown-menu";
 
-// Navigation
-import {
-  NavigationMenu,
-  NavigationMenuItem,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  NavigationMenuContent,
-} from "@/components/ui/navigation-menu";
-
 import LanguageSwitcher from "./ui/LanguageSwitcher";
 import CustomDropdownMenu from "./ui/CustomDropdown";
 

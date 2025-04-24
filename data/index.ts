@@ -26,12 +26,12 @@ export const navLinks: NavLink[] = [
 
 // Services
 export const services = [
-  { key: "serve1", img: "/trans.svg" },
-  { key: "serve2", img: "/student.svg" },
+  { key: "serve1", img: "/trans.svg", href: "/translate" },
+  { key: "serve2", img: "/student.svg", href: "/student" },
   { key: "serve3", img: "/ad.svg" },
-  { key: "serve4", img: "/marketing.svg" },
+  { key: "serve4", img: "/marketing.svg", href: "/marketing" },
   { key: "serve5", img: "/elec.svg" },
-  { key: "serve6", img: "/tech.svg" },
+  { key: "serve6", img: "/tech.svg", href: "/tech" },
   { key: "serve7", img: "/gifts.svg" },
   { key: "serve8", img: "/print.svg" },
   { key: "serve9", img: "/business.svg" },
@@ -187,5 +187,29 @@ export const itServices = [
     key: "it.data",
     description: "it.datades",
     icon: Database,
+  },
+];
+
+// E-Marketing
+export const markets = [
+  {
+    title: "cards.social",
+    description: "cards.socialdes",
+    image: "/social.png",
+  },
+  {
+    title: "cards.ads",
+    description: "cards.addes",
+    image: "/adss.png",
+  },
+  {
+    title: "cards.content",
+    description: "cards.contentdes",
+    image: "/cw.png",
+  },
+  {
+    title: "cards.seo",
+    description: "cards.seodes",
+    image: "/seo.png",
   },
 ];

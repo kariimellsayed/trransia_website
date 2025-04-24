@@ -2,6 +2,25 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 import React from "react";
 import FormStudent from "./FormStudent";
+import { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
+
+// MetaData
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("SEO.student");
+
+  return {
+    title: t("title"),
+    description: t("description"),
+    keywords: t("keywords"),
+    openGraph: {
+      title: t("title"),
+      description: t("description"),
+      locale: "ar",
+      siteName: "Transia",
+    },
+  };
+}
 
 const Student = () => {
   const t = useTranslations("Student");
@@ -22,28 +41,51 @@ const Student = () => {
       {/* Content */}
       <section className="relative z-20 w-full flex flex-col gap-10">
         {/* Texts */}
-        <div className="flex flex-col items-start gap-6">
-          <h1 className="head-color sm:text-3xl text-2xl font-bold">
+        <div className="flex-1 flex flex-col gap-8">
+          <h1 className="text-primary sm:text-4xl text-3xl font-bold">
             {t("title")}
           </h1>
-          <p className="sm:text-xl text-lg text-brandblack font-medium">
+          <p className="sm:text-xl text-lg text-brandblack leading-7 font-medium">
             {t("des")}
           </p>
+
           {/* our service */}
           <h2 className="sm:text-xl text-lg text-brandblack font-semibold">
             {t("our")} :
           </h2>
-          <ul className="list-disc list-inside space-y-2">
-            <li className="sm:text-lg text-base text-brandblack font-normal">
+
+          <ul className="list-disc list-inside space-y-3">
+            <li className="sm:text-lg text-base text-brandblack font-medium">
               {t("our1")}
             </li>
-            <li className="sm:text-lg text-base text-brandblack font-normal">
+            <li className="sm:text-lg text-base text-brandblack font-medium">
               {t("our2")}
             </li>
-            <li className="sm:text-lg text-base text-brandblack font-normal">
+            <li className="sm:text-lg text-base text-brandblack font-medium">
               {t("our3")}
             </li>
           </ul>
+
+          {/* Order */}
+          <div className="flex gap-4">
+            <a
+              href="#student"
+              className="bg-primary hover:bg-red-600 text-white font-semibold py-3 px-8 rounded-full
+                 transition-all duration-300 shadow-md hover:shadow-lg hover:shadow-primary/20 animate-slideIn"
+            >
+              {t("order")}
+            </a>
+            <a
+              href="https://wa.me/201234567890"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border border-primary text-primary hover:bg-primary hover:text-white
+                 font-semibold py-3 px-8 rounded-full transition-all duration-300 animate-slideIn"
+            >
+              {t("contact")}
+            </a>
+          </div>
+
           {/* end texts */}
           <p className="sm:text-xl text-lg text-brandblack font-medium">
             {t("end")}

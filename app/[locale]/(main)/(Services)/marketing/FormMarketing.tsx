@@ -1,115 +1,103 @@
 "use client";
 
-import { FileText, X, StickyNote } from "lucide-react";
-import { toast } from "sonner";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { Textarea } from "@/components/ui/textarea";
+import { StickyNote, X } from "lucide-react";
+import { toast } from "sonner";
+import { useLocale, useTranslations } from "next-intl";
 
-const FormMarketing = () => {
-  const [selectedFile, setSelectedFile] = useState<File | null>(null);
+// لستة خدمات تقنية المعلومات
+const services = ["social", "ads", "content", "seo"];
+
+const FormMarket = () => {
+  const [serviceType, setServiceType] = useState<string>("");
   const [notes, setNotes] = useState<string>("");
+  const t = useTranslations("Marketing.cards");
+  const locale = useLocale();
 
-  const WHATSAPP_NUMBER = "201064689587"; // 👈🏻 غيّر الرقم هنا لرقم خدمة العملاء
-
-  // Change in File
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files && e.target.files.length > 0) {
-      setSelectedFile(e.target.files[0]);
-    }
-  };
-
-  // Remove File
-  const handleRemoveFile = () => {
-    setSelectedFile(null);
-  };
-
+  // التعامل مع إرسال الفورم
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // null File
-    if (!selectedFile) {
-      toast.error("الرجاء إرفاق ملف للترجمة.");
+
+    // تحقق بسيط: نوع الخدمة مطلوب
+    if (!serviceType) {
+      toast.error("من فضلك اختر الخدمة المطلوبة.");
       return;
     }
 
-    const now = new Date().toLocaleString("ar-SA", {
-      timeZone: "Asia/Riyadh", // ✅ توقيت السعودية
-      weekday: "long",
-      year: "numeric",
-      month: "long",
-      day: "numeric",
-      hour: "numeric",
-      minute: "numeric",
-    });
+    // إذا كل شيء صحيح، بنكوّن رسالة واتساب
+    const message = `
+طلب خدمة تسويق الكتروني جديد:
+- نوع الخدمة: ${serviceType}
+${notes ? `- الملاحظات: ${notes}` : ""}
+    `.trim();
 
-    const message = `📬 *تسويق الكتروني*
-      
-      🕒 *التاريخ والوقت:* ${now}
-      
+    // كوّن رابط واتساب
+    const whatsappNumber = "201064689587"; // ضع رقم واتساب هنا مع كود الدولة بدون +
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+      message
+    )}`;
 
-      📝 *ملاحظات العميل:*
-      ${notes.trim() !== "" ? `- ${notes}` : "- لا توجد ملاحظات"}
-      
-      📁 *الملف تم إرفاقه بواسطة العميل وسيتم إرساله لكم عند التأكيد.*
-      
-      📞 برجاء مراجعة البيانات والتواصل مع العميل في أقرب وقت ممكن.
-      
-      🔒 *جميع البيانات سرية وتحتفظ بها إدارة المنصة فقط.*`;
+    // افتح رابط واتساب في نافذة جديدة
+    window.open(whatsappUrl, "_blank");
 
-    const encodedMessage = encodeURIComponent(message);
-    const whatsappLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
-
-    window.open(whatsappLink, "_blank");
+    // عرض رسالة نجاح
     toast.success("تم تجهيز الرسالة بنجاح! سيتم فتح واتساب الآن.");
+
+    // إعادة تعيين الفورم بعد الإرسال
+    setServiceType("");
+    setNotes("");
   };
 
   return (
     <div
       className="relative bg-white/90 backdrop-blur-md border p-8 rounded-xl shadow-xl shadow-primary/30 w-full max-w-4xl
       mx-auto mt-10 animate-slideIn"
+      id="market"
     >
-      <form className="space-y-6" onSubmit={handleSubmit}>
-        {/* رفع ملف */}
-        <div className="animate-slideIn delay-300">
-          <label className="flex items-center gap-2 font-semibold mb-1">
-            ارفع ملف
-            <FileText className="w-4 h-4 text-brandred" />
+      <form onSubmit={handleSubmit} className="space-y-6">
+        {/* نوع الخدمة */}
+        <div className="animate-slideIn delay-100">
+          <label
+            className="flex items-center gap-2 font-semibold mb-1"
+            htmlFor="serviceType"
+          >
+            نوع الخدمة
           </label>
-          <div className="relative">
-            {selectedFile ? (
-              <div className="w-full px-4 py-2 bg-gray-100 rounded-lg flex items-center justify-between">
-                <div className="flex items-center gap-2">
-                  <FileText className="w-4 h-4 text-brandred" />
-                  <span>{selectedFile.name}</span>
-                </div>
-                <button
-                  type="button"
-                  onClick={handleRemoveFile}
-                  className="text-brandred"
+          <Select
+            onValueChange={(value) => setServiceType(value)}
+            value={serviceType}
+            dir={locale === "ar" ? "rtl" : "ltr"}
+          >
+            <SelectTrigger
+              id="serviceType"
+              className="w-full rounded-lg transition-all duration-200 hover:shadow-sm
+              hover:shadow-primary"
+            >
+              <SelectValue placeholder="اختر نوع الخدمة" />
+            </SelectTrigger>
+            <SelectContent>
+              {services.map((service) => (
+                <SelectItem
+                  key={service}
+                  value={service}
+                  className="text-base font-semibold"
                 >
-                  <X className="w-4 h-4" />
-                </button>
-              </div>
-            ) : (
-              <>
-                <Input
-                  id="file-upload"
-                  type="file"
-                  accept=".pdf,.doc,.docx,.ppt,.pptx,.png,.jpg,.jpeg,.txt"
-                  className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
-                  onChange={handleFileChange}
-                />
-                <div className="w-full px-4 py-2 bg-gray-100 rounded-lg flex items-center gap-2">
-                  <FileText className="w-4 h-4 text-brandred" />
-                  اختر ملف
-                </div>
-              </>
-            )}
-          </div>
+                  {t(service)}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
         </div>
 
-        {/* Message */}
         <div className="animate-slideIn delay-400">
           <label className="flex items-center gap-2 font-semibold mb-1">
             الملاحظات (اختياري)
@@ -119,17 +107,18 @@ const FormMarketing = () => {
             rows={4}
             value={notes}
             onChange={(e) => setNotes(e.target.value)}
-            className="w-full resize-none rounded-lg"
+            className="w-full resize-none rounded-lg transition-all duration-200 hover:shadow-sm
+             hover:shadow-primary"
             placeholder="أضف أي ملاحظات إضافية هنا..."
           />
         </div>
 
-        {/* زر التنفيذ */}
+        {/* الزرار */}
         <div className="animate-slideIn delay-500">
           <Button
             type="submit"
             className="w-full bg-primary hover:bg-red-600 transition-all duration-200 rounded-xl font-semibold
-             cursor-pointer"
+            cursor-pointer"
           >
             تنفيذ الطلب
           </Button>
@@ -139,4 +128,4 @@ const FormMarketing = () => {
   );
 };
 
-export default FormMarketing;
+export default FormMarket;

@@ -46,13 +46,15 @@ const Teaser = () => {
       <div className="flex justify-center animate-fadeInUp mt-10">
         <Link
           href="/register"
-          className="w-full max-w-4xl flex items-center flex-col md:flex-row justify-between gap-4 py-2 px-6 bg-white rounded-2xl
-           shadow-lg shadow-primary hover:scale-90 transition-all duration-300 border border-gray-200"
+          className="w-full max-w-4xl flex items-center flex-col md:flex-row justify-between gap-4 py-2 px-6
+           bg-white rounded-2xl shadow-lg shadow-primary border border-gray-200 group"
         >
           {/* Offer Texts */}
           <div className="flex flex-col md:items-end items-center gap-1">
-            <p className="text-sm text-gray-600">{t("offer")}</p>
-            <p className="text-base font-semibold">{t("descount")}</p>
+            <p className="sm:text-xl text-base text-gray-600">{t("offer")}</p>
+            <p className="sm:text-xl text-base font-semibold">
+              {t("descount")}
+            </p>
           </div>
           <div className="flex items-center">
             <Image
@@ -60,11 +62,16 @@ const Teaser = () => {
               alt="50% Discount"
               width={200}
               height={200}
-              className="object-contain sm:w-32 sm:h-32 w-24 h-24"
+              className="object-contain sm:w-44 sm:h-44 w-24 h-24"
             />
           </div>
           <div className="flex items-center">
-            <p className="text-xl font-bold text-primary">{t("reg")}</p>
+            <button
+              className="text-xl font-bold text-white bg-primary px-8 py-2 rounded-2xl transition-all
+             duration-200 hover:bg-red-600 group-hover:scale-90"
+            >
+              {t("reg")}
+            </button>
           </div>
         </Link>
       </div>
