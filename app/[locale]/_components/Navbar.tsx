@@ -78,7 +78,7 @@ const Navbar = () => {
                       className="flex items-center gap-1 text-lg font-normal cursor-pointer hover:bg-primary hover:text-white border-1
                        border-primary focus:outline-none focus:ring-0 focus-visible:ring-0 w-full justify-center px-7 py-3 rounded-xl duration-200"
                     >
-                      {t(link.key)}{" "}
+                      {t(link.key)}
                       <Image
                         src="/drop-icon.svg"
                         alt="services"
