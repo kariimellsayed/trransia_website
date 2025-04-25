@@ -2,16 +2,7 @@
 
 import { useState } from "react";
 
-import { app } from "@/firebase/firebase";
-import {
-  createUserWithEmailAndPassword,
-  getAuth,
-  sendEmailVerification,
-  updateProfile,
-} from "firebase/auth";
-
 import Link from "next/link";
-import { toast } from "sonner"; // لو شغال بـ shadcn/ui Toast
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 
@@ -19,7 +10,6 @@ const RegisterPage = () => {
   const t = useTranslations("RegisterWithEmail");
   const locale = useLocale();
 
-  const auth = getAuth(app);
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -29,35 +19,9 @@ const RegisterPage = () => {
 
   const handleRegister = async (e: React.FormEvent) => {
     e.preventDefault();
+    // Register With Email Logic.......
     setIsLoading(true);
     setError("");
-
-    try {
-      const userCredential = await createUserWithEmailAndPassword(
-        auth,
-        email,
-        password
-      );
-      await updateProfile(userCredential.user, {
-        displayName: username,
-      });
-      await sendEmailVerification(userCredential.user);
-
-      toast.success("✅ تم إرسال رسالة التحقق إلى بريدك الإلكتروني");
-    } catch (err: any) {
-      if (err.code === "auth/email-already-in-use") {
-        setError("📧 هذا البريد الإلكتروني مستخدم من قبل.");
-      } else if (err.code === "auth/weak-password") {
-        setError("🔒 كلمة المرور ضعيفة. يجب أن تكون على الأقل 6 أحرف.");
-      } else if (err.code === "auth/invalid-email") {
-        setError("❌ البريد الإلكتروني غير صالح.");
-      } else {
-        setError(err.message);
-      }
-      toast.error("❌ حدث خطأ أثناء التسجيل");
-    } finally {
-      setIsLoading(false);
-    }
   };
 
   return (

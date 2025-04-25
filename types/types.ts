@@ -4,7 +4,7 @@ export type ValidPathnames =
   | "/about"
   | "/contact"
   | "/translate"
-  | "/service2"
+  | "/ads"
   | "/marketing"
   | "/tech"
   | "/student"

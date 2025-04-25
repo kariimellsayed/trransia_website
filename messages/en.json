@@ -41,6 +41,11 @@
       "title": "IT Services | Transia",
       "description": "Innovative IT solutions from Transia! We provide website development, app design, and technical support services for businesses and individuals to enhance your tech performance efficiently.",
       "keywords": "IT Services, Website Development, App Design, Technical Support, Tech Services, IT Solutions, Transia, IT Support"
+    },
+    "ad": {
+      "title": "Advertising Services | Transia",
+      "description": "Elevate your brand with Transia’s advertising services! We offer billboard ads, poster design, and professional promotional videos to achieve your goals.",
+      "keywords": "Advertising Services, Billboard Ads, Poster Design, Promotional Videos, Ad Services, Transia, Advertising Solutions"
     }
   },
   "RegisterWithEmail": {
@@ -244,8 +249,10 @@
   "Translate": {
     "title": "Certified Translation",
     "des": "At Transia, we elevate certified translation services to new heights of professionalism and precision, catering to the needs of individuals, academic institutions, and official entities with unparalleled quality. Our translations are accredited locally and internationally, ensuring results that exceed expectations. Backed by our exceptional team of professional translators—who bring extensive expertise and a passion for delivering the finest linguistic experience—we stand as the premier choice for anyone seeking excellence in the world of translation.",
+
     "contact": "Contact Us",
     "order": "Order your service now",
+
     "depart": "Certified Translation Department For All Languages",
     "office": "Our Offices Group Translates To And From The Following Languages ​​For All Domains",
     "from": "Arabic Language To And From The Following Languages ​​In All Of Its Specialties",
@@ -254,8 +261,10 @@
   "Student": {
     "title": "Student Services",
     "des": "Our Student Services Department offers exceptional support designed to assist you in every aspect of your academic journey.",
+
     "contact": "Contact Us",
     "order": "Order your service now",
+
     "our": "Our services include",
     "our1": "Academic Document & Research Design: Need to design an academic document or a standout research paper? We provide professional design services that align with university standards.",
     "our2": "Official Document Translation: We offer accurate and reliable translation for official documents, ensuring the original meaning is preserved.",
@@ -265,8 +274,10 @@
   "Marketing": {
     "title": "Digital Marketing",
     "des": "At Transia, we elevate your brand’s success with innovative digital marketing services, tailored to enhance your online presence, engage your target audience, and achieve your marketing goals through advanced strategies that deliver tangible results.",
+
     "contact": "Contact Us",
     "order": "Order your service now",
+
     "our": "Our services include",
     "our1": "Social Media Account Management",
     "our2": "Paid Advertising Campaigns",
@@ -277,7 +288,8 @@
       "social": "Social Media Management",
       "ads": "Digital Advertising",
       "content": "Content writing",
-      "seo": "Search Engine Optimization (SEO)",
+      "other": "other",
+
       "socialdes": "Professional management of your social media accounts to enhance your digital presence.",
       "addes": "Targeted advertising campaigns on Google and social media to achieve the best results.",
       "contentdes": "Creative and engaging content that enhances your brand identity and attracts your customers.",
@@ -297,20 +309,46 @@
     "des": "Our Tech Department offers integrated digital solutions that keep pace with market developments and support growth strategies by leveraging technology to enhance digital presence and achieve marketing goals.",
     "contact": "Contact Us",
     "order": "Order your service now",
+
     "it": {
       "app": "Application development",
       "web": "Web development",
       "uiux": "UiUX",
       "data": "Data analysis",
+      "other": "other",
       "appdes": "We provide professional mobile applications that meet your business needs with the latest technologies.",
       "webdes": "We design and develop responsive and fast websites to enhance your digital presence.",
       "uiuxdes": "We design engaging user interfaces and seamless user experiences for your digital products.",
       "datades": "We analyze your data to extract valuable insights that support your strategic decisions."
     },
+
     "our": "Our services include",
     "our1": "Effective Product & Service Promotion: Utilizing modern digital channels and well-planned campaigns to promote offerings efficiently.",
     "our2": "Brand Awareness & Digital Identity Building: Creating a unique and consistent digital identity that strengthens your brand recognition.",
     "our3": "Customer Acquisition Through Smart Strategies: Attracting new customers using technology-driven strategies supported by precise analytics and user behavior insights."
+  },
+  "Ad": {
+    "title": "Advertising & Promotion",
+    "des": "At our company, we offer comprehensive advertising and promotional services aimed at boosting your brand’s presence in the market and increasing awareness among your target audience in a professional and impactful way.",
+
+    "our": "Our services include",
+    "our1": "Product and Service Promotion: Creative and effective advertising campaigns to promote your products and services.",
+    "our2": "Brand Awareness Enhancement: Engaging visual and media content that reflects your brand identity and strengthens your market position.",
+    "our3": "Tangible Results: Generating measurable engagement and sales across both digital and traditional platforms.",
+
+    "contact": "Contact Us",
+    "order": "Order your service now",
+
+    "service1": "Billboard Advertising",
+    "service2": "Poster Design",
+    "service3": "Promotional Videos",
+    "service4": "Promotional Cards Design",
+    "other": "other",
+
+    "service1des": "We design large, eye-catching billboards to ensure your message reaches your audience.",
+    "service2des": "We provide innovative poster designs tailored to your advertising campaign needs.",
+    "service3des": "We produce professional promotional videos that capture your audience's attention.",
+    "service4des": "We design professional and creative promotional cards that reflect your brand identity."
   },
   "Languaches": {}
 }

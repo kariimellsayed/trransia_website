@@ -90,13 +90,23 @@ const Navbar = () => {
 
                   <DropdownMenuContent
                     align="center"
-                    className="border-[0.5px] border-primary w-52"
+                    className="border-[0.5px] border-primary w-52 bg-gray-400 p-4 flex flex-col items-center space-y-1"
                   >
                     {link.children?.map((child) => (
-                      <DropdownMenuItem asChild key={child.key}>
+                      <DropdownMenuItem
+                        asChild
+                        key={child.key}
+                        className="space-y-3 w-full"
+                      >
                         <Link
+                          onClick={() => setMenuOpen(false)}
                           href={child.href}
-                          className="text-lg font-medium text-brandblack"
+                          className={`text-lg font-semibold  w-full flex justify-center items-cente mx-auto p-2
+                          rounded-xl ${
+                            pathname === child.href
+                              ? "bg-primary text-white"
+                              : "bg-white text-brandblack"
+                          }`}
                         >
                           {t(child.key)}
                         </Link>

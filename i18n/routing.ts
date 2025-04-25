@@ -22,9 +22,9 @@ export const routing = defineRouting({
       en: "/translate",
       ar: "/الترجمة_المعتمدة",
     },
-    "/service2": {
-      en: "/service2",
-      ar: "/خدمة2",
+    "/ads": {
+      en: "/ads",
+      ar: "/الدعايا_و_الاعلان",
     },
     "/marketing": {
       en: "/marketing",

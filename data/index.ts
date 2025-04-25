@@ -1,6 +1,14 @@
 import { NavLink } from "@/types/types";
 // it services
-import { Code, Smartphone, LayoutTemplate, Database } from "lucide-react";
+import {
+  Code,
+  Smartphone,
+  LayoutTemplate,
+  Database,
+  Megaphone,
+  ImageIcon,
+  Film,
+} from "lucide-react";
 
 // NavItems
 export const navLinks: NavLink[] = [
@@ -12,7 +20,7 @@ export const navLinks: NavLink[] = [
     dropdown: true,
     children: [
       { key: "service1", href: "/translate" },
-      { key: "service2", href: "/service2" },
+      { key: "service2", href: "/ads" },
       { key: "service3", href: "/marketing" },
       { key: "service4", href: "/tech" },
       { key: "service5", href: "/student" },
@@ -212,4 +220,12 @@ export const markets = [
     description: "cards.seodes",
     image: "/seo.png",
   },
+];
+
+// Ads
+export const ads = [
+  { title: "service1", description: "service1des", image: "/buil.png" },
+  { title: "service2", description: "service2des", image: "/posters.png" },
+  { title: "service3", description: "service3des", image: "/video.png" },
+  { title: "service4", description: "service3des", image: "/cards.png" },
 ];

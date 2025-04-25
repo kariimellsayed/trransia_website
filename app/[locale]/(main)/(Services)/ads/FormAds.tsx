@@ -15,12 +15,12 @@ import { toast } from "sonner";
 import { useLocale, useTranslations } from "next-intl";
 
 // لستة خدمات تقنية المعلومات
-const services = ["social", "ads", "content", "seo", "other"];
+const services = ["service1", "service2", "service3", "service4", "other"];
 
-const FormMarket = () => {
+const FormAds = () => {
   const [serviceType, setServiceType] = useState<string>("");
   const [notes, setNotes] = useState<string>("");
-  const t = useTranslations("Marketing.cards");
+  const t = useTranslations("Ad");
   const locale = useLocale();
 
   // التعامل مع إرسال الفورم
@@ -35,7 +35,7 @@ const FormMarket = () => {
 
     // إذا كل شيء صحيح، بنكوّن رسالة واتساب
     const message = `
-طلب خدمة تسويق الكتروني جديد:
+طلب خدمة دعاية واعلان جديد:
 - نوع الخدمة: ${serviceType}
 ${notes ? `- الملاحظات: ${notes}` : ""}
     `.trim();
@@ -61,7 +61,7 @@ ${notes ? `- الملاحظات: ${notes}` : ""}
     <div
       className="relative bg-white/90 backdrop-blur-md border p-8 rounded-xl shadow-xl shadow-primary/30 w-full max-w-4xl
       mx-auto mt-10 animate-slideIn"
-      id="market"
+      id="ad"
     >
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* نوع الخدمة */}
@@ -128,4 +128,4 @@ ${notes ? `- الملاحظات: ${notes}` : ""}
   );
 };
 
-export default FormMarket;
+export default FormAds;
