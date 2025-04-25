@@ -36,7 +36,7 @@ export const navLinks: NavLink[] = [
 export const services = [
   { key: "serve1", img: "/trans.svg", href: "/translate" },
   { key: "serve2", img: "/student.svg", href: "/student" },
-  { key: "serve3", img: "/ad.svg" },
+  { key: "serve3", img: "/ad.svg", href: "/ads" },
   { key: "serve4", img: "/marketing.svg", href: "/marketing" },
   { key: "serve5", img: "/elec.svg" },
   { key: "serve6", img: "/tech.svg", href: "/tech" },
