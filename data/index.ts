@@ -1,14 +1,6 @@
-import { NavLink } from "@/types/types";
+import { NavLink, ServicesCards } from "@/types/types";
 // it services
-import {
-  Code,
-  Smartphone,
-  LayoutTemplate,
-  Database,
-  Megaphone,
-  ImageIcon,
-  Film,
-} from "lucide-react";
+import { Code, Smartphone, LayoutTemplate, Database } from "lucide-react";
 
 // NavItems
 export const navLinks: NavLink[] = [
@@ -24,7 +16,7 @@ export const navLinks: NavLink[] = [
       { key: "service3", href: "/marketing" },
       { key: "service4", href: "/tech" },
       { key: "service5", href: "/student" },
-      { key: "service6", href: "/service6" },
+      { key: "service6", href: "/electronic" },
       { key: "service7", href: "/service7" },
       { key: "service8", href: "/service8" },
       { key: "service9", href: "/service9" },
@@ -46,16 +38,16 @@ export const services = [
 ];
 
 // ServicesSection
-export const servicesCards = [
-  { key: "trans", img: "/serv1.png" },
-  { key: "ad", img: "/serv2.png" },
-  { key: "business", img: "/serv3.png" },
-  { key: "tech", img: "/serv4.png" },
-  { key: "marketing", img: "/serv5.png" },
-  { key: "student", img: "/serv6.png" },
+export const servicesCards: ServicesCards[] = [
+  { key: "trans", img: "/serv1.png", href: "/translate" },
+  { key: "ad", img: "/serv2.png", href: "/ads" },
+  { key: "tech", img: "/serv4.png", href: "/tech" },
+  { key: "marketing", img: "/serv5.png", href: "/marketing" },
+  { key: "student", img: "/serv6.png", href: "/student" },
   { key: "elec", img: "/serv7.png" },
   { key: "print", img: "/serv8.png" },
   { key: "gifts", img: "/serv9.png" },
+  { key: "business", img: "/serv3.png" },
 ];
 
 // Banners
@@ -228,4 +220,21 @@ export const ads = [
   { title: "service2", description: "service2des", image: "/posters.png" },
   { title: "service3", description: "service3des", image: "/video.png" },
   { title: "service4", description: "service3des", image: "/cards.png" },
+];
+
+// Student
+export const students = [
+  { title: "service1", description: "service1des", image: "/reserch.png" },
+  { title: "service2", description: "service2des", image: "/prisnts.png" },
+  { title: "service3", description: "service3des", image: "/paint.png" },
+  { title: "service4", description: "service3des", image: "/print.png" },
+];
+
+// Electronics Services
+
+export const electronics = [
+  { title: "service1", description: "service1des", image: "/ecommerce.png" },
+  { title: "service2", description: "service2des", image: "/booking.png" },
+  { title: "service3", description: "service3des", image: "/payment.png" },
+  { title: "service4", description: "service3des", image: "/eforms.png" },
 ];

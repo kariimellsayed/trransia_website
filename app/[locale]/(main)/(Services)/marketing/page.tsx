@@ -6,6 +6,7 @@ import Image from "next/image";
 import React from "react";
 import FormMarket from "./FormMarketing";
 import { TrendingUp, Users, Award } from "lucide-react";
+import ContactButton from "@/components/ui/ContactButton";
 
 // MetaData
 export async function generateMetadata(): Promise<Metadata> {
@@ -80,15 +81,7 @@ const Marketing = () => {
               >
                 {t("order")}
               </a>
-              <a
-                href="https://wa.me/201234567890"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="border border-primary text-primary hover:bg-primary hover:text-white
-                 font-semibold py-3 px-8 rounded-full transition-all duration-300 animate-slideIn"
-              >
-                {t("contact")}
-              </a>
+              <ContactButton />
             </div>
           </div>
 
@@ -113,7 +106,8 @@ const Marketing = () => {
             {markets.map((service) => (
               <div
                 key={service.title}
-                className="bg-white/90 backdrop-blur-md border border-gray-200 rounded-xl shadow-md hover:shadow-lg hover:shadow-primary/20 transition-all duration-300 animate-slideIn overflow-hidden"
+                className="flex flex-col justify-between bg-white/90 backdrop-blur-md border border-gray-200 rounded-xl
+                 shadow-md hover:shadow-lg hover:shadow-primary/20 transition-all duration-300 animate-slideIn overflow-hidden"
               >
                 {/* Card Image */}
                 <div className="relative w-full h-40">
@@ -127,19 +121,23 @@ const Marketing = () => {
                 </div>
 
                 {/* Card Content */}
-                <div className="p-6 flex flex-col gap-4">
-                  <h3 className="text-lg font-semibold text-primary mb-2">
-                    {t(service.title)}
-                  </h3>
-                  <p className="text-gray-800 text-base">
-                    {t(service.description)}
-                  </p>
-                  <a
-                    href={"#market"}
-                    className="self-start bg-primary hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-full transition-all duration-300"
-                  >
-                    {t("order")}
-                  </a>
+                <div className="flex flex-col flex-grow p-6">
+                  <div className="flex-grow">
+                    <h3 className="text-lg font-semibold text-primary mb-2">
+                      {t(service.title)}
+                    </h3>
+                    <p className="text-gray-800 text-base">
+                      {t(service.description)}
+                    </p>
+                  </div>
+                  <div className="mt-6">
+                    <a
+                      href={"#market"}
+                      className="self-start bg-primary hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-full transition-all duration-300"
+                    >
+                      {t("order")}
+                    </a>
+                  </div>
                 </div>
               </div>
             ))}

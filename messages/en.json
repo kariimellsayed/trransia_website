@@ -46,7 +46,18 @@
       "title": "Advertising Services | Transia",
       "description": "Elevate your brand with Transia’s advertising services! We offer billboard ads, poster design, and professional promotional videos to achieve your goals.",
       "keywords": "Advertising Services, Billboard Ads, Poster Design, Promotional Videos, Ad Services, Transia, Advertising Solutions"
+    },
+    "elec": {
+      "title": "E-Services | Transia",
+      "description": "Enhance your digital business with Transia’s innovative e-services! We offer e-commerce store design, online booking management, e-payment solutions, and technical support with high quality.",
+      "keywords": "E-Services, E-Commerce Stores, Online Booking, E-Payment, Interactive Forms, Technical Support, Transia, Digital Solutions"
     }
+  },
+  "Account": {
+    "name": "Account",
+    "login": "Login",
+    "register": "Register",
+    "forgot": "Forget password ?"
   },
   "RegisterWithEmail": {
     "title": "Create an Account",
@@ -108,6 +119,17 @@
     "forgot": "Forget password ?",
     "loading": "Login In ..."
   },
+  "Forgot": {
+    "title": "Forget password ?",
+    "label": "Email address or Phone Numnber",
+    "cont": "Continue"
+  },
+  "Otp": {
+    "title": "Verification",
+    "des": "Please enter the verification code sent to you",
+    "sure": "Verify",
+    "reset": "Resend Code"
+  },
   "Navbar": {
     "home": "Home",
     "about": "About Us",
@@ -119,10 +141,10 @@
     "service3": "e-marketing",
     "service4": "Information Technology",
     "service5": "Student Service",
-    "service6": "Business Services",
-    "service7": "Electronic services",
-    "service8": "chart printer",
-    "service9": "promotional gifts",
+    "service6": "Electronic services",
+    "service7": "Screens and panels",
+    "service8": "promotional gifts",
+    "service9": "Business Services",
     "mobiletitle": "Transia"
   },
   "Footer": {
@@ -250,7 +272,6 @@
     "title": "Certified Translation",
     "des": "At Transia, we elevate certified translation services to new heights of professionalism and precision, catering to the needs of individuals, academic institutions, and official entities with unparalleled quality. Our translations are accredited locally and internationally, ensuring results that exceed expectations. Backed by our exceptional team of professional translators—who bring extensive expertise and a passion for delivering the finest linguistic experience—we stand as the premier choice for anyone seeking excellence in the world of translation.",
 
-    "contact": "Contact Us",
     "order": "Order your service now",
 
     "depart": "Certified Translation Department For All Languages",
@@ -260,22 +281,31 @@
   },
   "Student": {
     "title": "Student Services",
-    "des": "Our Student Services Department offers exceptional support designed to assist you in every aspect of your academic journey.",
+    "des": "We shape your academic journey with professionalism! We offer comprehensive student services, including writing university research and reports, precise translation of official documents, designing academic documents and research to meet standards, high-quality engineering blueprint printing, and fast, efficient copying and printing services, supporting you every step toward success.",
 
-    "contact": "Contact Us",
     "order": "Order your service now",
 
     "our": "Our services include",
     "our1": "Academic Document & Research Design: Need to design an academic document or a standout research paper? We provide professional design services that align with university standards.",
     "our2": "Official Document Translation: We offer accurate and reliable translation for official documents, ensuring the original meaning is preserved.",
     "our3": "University Research & Report Writing: Whether you need help writing a research paper or a university report, we deliver high-quality academic content, ready for submission, and always on time.",
-    "end": "We are here to provide you with the best support throughout your academic path, helping you achieve your educational goals with ease and professionalism."
+    "end": "We are here to provide you with the best support throughout your academic path, helping you achieve your educational goals with ease and professionalism.",
+
+    "service1": "Academic Research Writing",
+    "service2": "Presentation Preparation",
+    "service3": "Engineering Blueprint Printing",
+    "service4": "Copying and Printing",
+    "other": "other",
+
+    "service1des": "We help you write professional academic research that meets university standards.",
+    "service2des": "We design engaging and organized presentations to help you present your ideas",
+    "service3des": "We print your engineering blueprints with high precision using the latest technology",
+    "service4des": "We offer high-quality copying and printing services with fast turnaround, supporting all sizes and types to meet students’ academic needs."
   },
   "Marketing": {
     "title": "Digital Marketing",
     "des": "At Transia, we elevate your brand’s success with innovative digital marketing services, tailored to enhance your online presence, engage your target audience, and achieve your marketing goals through advanced strategies that deliver tangible results.",
 
-    "contact": "Contact Us",
     "order": "Order your service now",
 
     "our": "Our services include",
@@ -307,7 +337,7 @@
   "Tech": {
     "title": "Information Technology",
     "des": "Our Tech Department offers integrated digital solutions that keep pace with market developments and support growth strategies by leveraging technology to enhance digital presence and achieve marketing goals.",
-    "contact": "Contact Us",
+
     "order": "Order your service now",
 
     "it": {
@@ -336,7 +366,6 @@
     "our2": "Brand Awareness Enhancement: Engaging visual and media content that reflects your brand identity and strengthens your market position.",
     "our3": "Tangible Results: Generating measurable engagement and sales across both digital and traditional platforms.",
 
-    "contact": "Contact Us",
     "order": "Order your service now",
 
     "service1": "Billboard Advertising",
@@ -349,6 +378,26 @@
     "service2des": "We provide innovative poster designs tailored to your advertising campaign needs.",
     "service3des": "We produce professional promotional videos that capture your audience's attention.",
     "service4des": "We design professional and creative promotional cards that reflect your brand identity."
+  },
+  "Electronic": {
+    "title": "Electronic-Services",
+    "des": "At Transia, we provide innovative e-services to support your digital business! From designing e-commerce stores and managing online bookings, to offering e-payment solutions, creating interactive forms, and providing remote technical support, we’re here to streamline your digital experience with efficiency and speed.",
+
+    "order": "Order your service now",
+
+    "service1": "E-Commerce Store Creation and Management",
+    "service2": "Online Booking and Appointment Management",
+    "service3": "E-Payment and Invoicing Services",
+    "service4": "Interactive E-Forms Creation",
+    "other": "other",
+
+    "service1des": "Design and develop professional e-commerce stores.",
+    "service2des": "Develop online booking systems for businesses with an easy interface for clients.",
+    "service3des": "Provide secure e-payment solutions with customized invoice generation and delivery.",
+    "service4des": "Design customized e-forms like surveys and service requests, with data collection."
+  },
+  "Button": {
+    "contact": "Contact Us"
   },
   "Languaches": {}
 }

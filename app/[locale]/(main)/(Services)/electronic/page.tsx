@@ -1,15 +1,15 @@
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import React from "react";
-import FormStudent from "./FormStudent";
 import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import ContactButton from "@/components/ui/ContactButton";
-import { students } from "@/data";
+import { electronics } from "@/data";
+import FormElectronic from "./FormElectronic";
 
 // MetaData
 export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations("SEO.student");
+  const t = await getTranslations("SEO.elec");
 
   return {
     title: t("title"),
@@ -24,13 +24,13 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-const Student = () => {
-  const t = useTranslations("Student");
+const Electronic = () => {
+  const t = useTranslations("Electronic");
   return (
     <main className="relative min-h-screen w-full padding">
       {/* Background Image */}
       <Image
-        src="/student-bg.png"
+        src="/electronic-bg.jpg"
         alt="Translate Background"
         fill
         className="object-cover object-bottom z-0"
@@ -54,7 +54,7 @@ const Student = () => {
 
             <div className="flex gap-4">
               <a
-                href="#student"
+                href="#elec"
                 className="bg-primary hover:bg-red-600 text-white font-semibold py-3 px-8 rounded-full
                  transition-all duration-300 shadow-md hover:shadow-lg hover:shadow-primary/20 animate-slideIn"
               >
@@ -67,7 +67,7 @@ const Student = () => {
           {/* Side Image */}
           <div className="flex-1 flex justify-center">
             <Image
-              src="/info-student.png"
+              src="/info-elec.png"
               alt="Marketing Visual"
               width={450}
               height={400}
@@ -76,19 +76,20 @@ const Student = () => {
           </div>
         </div>
 
-        {/* student Cards */}
-        <div className="mt-10">
+        {/* Electronic Cards */}
+        <div className="mt-7">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {students.map((student) => (
+            {electronics.map((elec) => (
               <div
-                key={student.title}
-                className="bg-white/90 backdrop-blur-md border border-gray-200 rounded-xl shadow-md hover:shadow-lg hover:shadow-primary/20 transition-all duration-300 animate-slideIn overflow-hidden"
+                key={elec.title}
+                className="flex flex-col justify-between bg-white/90 backdrop-blur-md border border-gray-200 rounded-xl
+                 shadow-md hover:shadow-lg hover:shadow-primary/20 transition-all duration-300 animate-slideIn overflow-hidden"
               >
                 {/* Card Image */}
                 <div className="relative w-full h-40">
                   <Image
-                    src={student.image}
-                    alt={t(student.title)}
+                    src={elec.image}
+                    alt={t(elec.title)}
                     fill
                     className="object-cover transition-transform duration-300 hover:scale-110"
                   />
@@ -96,30 +97,37 @@ const Student = () => {
                 </div>
 
                 {/* Card Content */}
-                <div className="p-6 flex flex-col gap-4">
-                  <h3 className="text-lg font-semibold text-primary mb-2">
-                    {t(student.title)}
-                  </h3>
-                  <p className="text-gray-800 text-base">
-                    {t(student.description)}
-                  </p>
-                  <a
-                    href={"#student"}
-                    className="self-start bg-primary hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-full transition-all duration-300"
-                  >
-                    {t("order")}
-                  </a>
+                <div className="flex flex-col flex-grow p-6">
+                  <div className="flex-grow">
+                    <h3 className="text-lg font-semibold text-primary mb-2">
+                      {t(elec.title)}
+                    </h3>
+                    <p className="text-gray-800 text-base">
+                      {t(elec.description)}
+                    </p>
+                  </div>
+
+                  {/* زرار الطلب */}
+                  <div className="mt-6">
+                    <a
+                      href={"#elec"}
+                      className="block w-fit bg-primary hover:bg-red-600 text-white font-semibold py-2 px-4
+                       rounded-full transition-all duration-300"
+                    >
+                      {t("order")}
+                    </a>
+                  </div>
                 </div>
               </div>
             ))}
           </div>
         </div>
 
-        {/* Form Student */}
-        <FormStudent />
+        {/* Form */}
+        <FormElectronic />
       </section>
     </main>
   );
 };
 
-export default Student;
+export default Electronic;

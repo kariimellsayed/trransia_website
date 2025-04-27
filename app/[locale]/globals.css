@@ -136,6 +136,25 @@
   body {
     @apply bg-background text-foreground selection:bg-black selection:text-white;
   }
+  /* Scroll */
+  /* تخصيص المسطرة Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #ee1d23, #231f20);
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, #231f20, #ee1d23);
+  }
 }
 
 @layer utilities {

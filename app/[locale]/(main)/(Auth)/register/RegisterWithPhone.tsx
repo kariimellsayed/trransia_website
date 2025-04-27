@@ -5,7 +5,7 @@ import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 
 const RegisterWithPhone = () => {
   const t = useTranslations("RegisterWithPhone");
@@ -46,7 +46,10 @@ const RegisterWithPhone = () => {
           {t("title")}
         </h2>
 
-        <form onSubmit={handleSubmit} className="mt-14 space-y-6">
+        <form
+          onSubmit={handleSubmit}
+          className="mt-14 space-y-6 animate-fadeInUp"
+        >
           {/* رقم الموبايل */}
           <div className="flex justify-start flex-col space-y-2">
             <label
@@ -59,11 +62,16 @@ const RegisterWithPhone = () => {
               country={"sa"}
               value={phone}
               onChange={(phone) => setPhone(phone)}
-              inputClass="!w-full !rounded-xl !border !border-brandgray !py-2 !pl-14 !text-sm !text-brandblack
-              !focus:outline-none !focus:border-brandred"
+              inputClass="!w-full !rounded-xl !border !border-brandgray !py-2 !pl-20 !text-sm !text-brandblack
+              !focus:outline-none !focus:border-brandred !placeholder-black-300"
               containerClass="!w-full !relative"
-              buttonClass="!absolute !left-3 !top-1/2 !-translate-y-1/2 !bg-transparent !border-none !p-0 !m-0"
-              placeholder={t("place2")}
+              buttonClass="!absolute !left-4 !top-1/2 !-translate-y-1/2 !bg-transparent !border-none !p-0 !m-0"
+              dropdownClass="!rounded-xl !mt-2 !left-1/2"
+              inputProps={{
+                placeholder: t("place2"),
+                name: "phone",
+                required: true,
+              }}
             />
           </div>
 

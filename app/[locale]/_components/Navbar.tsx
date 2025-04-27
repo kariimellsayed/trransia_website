@@ -16,6 +16,7 @@ import {
 
 import LanguageSwitcher from "./ui/LanguageSwitcher";
 import CustomDropdownMenu from "./ui/CustomDropdown";
+import Account from "./ui/Account";
 
 const Navbar = () => {
   const t = useTranslations("Navbar");
@@ -24,8 +25,8 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="w-full border-b border-[0.5px] border-brandgray bg-white">
-      <div className="mx-auto flex justify-between items-center padding-x py-1">
+    <header className="w-full border-b border-[0.5px] border-brandgray shadow-xl shadow-red-50 bg-white">
+      <div className="mx-auto flex justify-between items-center padding-x py-2">
         {/* Logo */}
         <Link href="/home">
           <Image
@@ -153,13 +154,18 @@ const Navbar = () => {
                 key={link.key}
                 href={link.href}
                 className={`text-lg font-normal transition-colors hover:text-primary ${
-                  pathname === link.href ? "text-primary font-semibold" : ""
+                  pathname === link.href
+                    ? "text-primary font-semibold border-b-[0.5px] border-primary"
+                    : "text-brandblack"
                 }`}
               >
                 {t(link.key)}
               </Link>
             ) : null
           )}
+
+          {/* Accont */}
+          <Account />
 
           {/* Language */}
           <LanguageSwitcher />

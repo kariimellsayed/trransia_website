@@ -2,9 +2,9 @@
 
 import { useState } from "react";
 
-import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
+import { Link } from "@/i18n/navigation";
 
 const LoginWithPhone = () => {
   const t = useTranslations("LoginWithPhone");
@@ -40,7 +40,10 @@ const LoginWithPhone = () => {
           {t("title")}
         </h2>
 
-        <form onSubmit={handleRegister} className="mt-14 space-y-6">
+        <form
+          onSubmit={handleRegister}
+          className="mt-14 space-y-6 animate-fadeInUp"
+        >
           <div className="flex justify-start flex-col space-y-2">
             <label
               htmlFor="phone"

@@ -4,6 +4,7 @@ import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { ads } from "@/data";
 import FormAds from "./FormAds";
+import ContactButton from "@/components/ui/ContactButton";
 
 // MetaData
 export async function generateMetadata(): Promise<Metadata> {
@@ -75,15 +76,7 @@ const Tech = () => {
               >
                 {t("order")}
               </a>
-              <a
-                href="https://wa.me/201234567890"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="border border-primary text-primary hover:bg-primary hover:text-white
-                 font-semibold py-3 px-8 rounded-full transition-all duration-300 animate-slideIn"
-              >
-                {t("contact")}
-              </a>
+              <ContactButton />
             </div>
           </div>
 

@@ -12,6 +12,7 @@ import britishFlag from "@/public/british.svg";
 import { Link, usePathname } from "@/i18n/navigation";
 import { useLocale } from "next-intl";
 import Image from "next/image";
+import { ChevronDown } from "lucide-react";
 
 const LanguageSwitcher = () => {
   const locale = useLocale();
@@ -32,7 +33,7 @@ const LanguageSwitcher = () => {
               height={15}
             />
             {locale === "ar" ? "العربية" : "English"}
-            <Image src="/drop-icon.svg" alt="services" width={12} height={6} />
+            <ChevronDown size={16} />
           </span>
         </DropdownMenuTrigger>
 

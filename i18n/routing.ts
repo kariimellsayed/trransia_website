@@ -38,9 +38,9 @@ export const routing = defineRouting({
       en: "/student",
       ar: "/خدمة_طالب",
     },
-    "/service6": {
-      en: "/service6",
-      ar: "/خدمة6",
+    "/electronic": {
+      en: "/electronic",
+      ar: "/خدمات_الكترونية",
     },
     "/service7": {
       en: "/service7",
@@ -53,6 +53,22 @@ export const routing = defineRouting({
     "/service9": {
       en: "/service9",
       ar: "/خدمة9",
+    },
+    "/register": {
+      en: "/register",
+      ar: "/تسجيل",
+    },
+    "/login": {
+      en: "/login",
+      ar: "/تسجيل_الدخول",
+    },
+    "/forgot-password": {
+      en: "/forgot-password",
+      ar: "/نسيت_كلمة_المرور",
+    },
+    "/verify-otp": {
+      en: "/verify-otp",
+      ar: "/التحقق",
     },
   },
 });
