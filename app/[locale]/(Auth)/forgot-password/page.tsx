@@ -12,7 +12,11 @@ const Forgot = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-
+    //
+    //
+    // Logic
+    //
+    //
     if (data.trim() !== "") {
       // هنا بتعمل التنقل
       router.push("/verify-otp");

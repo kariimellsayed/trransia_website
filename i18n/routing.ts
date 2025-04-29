@@ -5,6 +5,10 @@ export const routing = defineRouting({
   defaultLocale: "ar",
   localeDetection: false,
   pathnames: {
+    "/": {
+      en: "/",
+      ar: "/",
+    },
     "/home": {
       en: "/home",
       ar: "/الرئيسية",
@@ -42,17 +46,17 @@ export const routing = defineRouting({
       en: "/electronic",
       ar: "/خدمات_الكترونية",
     },
-    "/service7": {
-      en: "/service7",
-      ar: "/خدمة7",
+    "/screens": {
+      en: "/screens",
+      ar: "/شاشات_لوحات",
     },
-    "/service8": {
-      en: "/service8",
-      ar: "/خدمة8",
+    "/gifts": {
+      en: "/gifts",
+      ar: "/هدايا_دعائية",
     },
-    "/service9": {
-      en: "/service9",
-      ar: "/خدمة9",
+    "/business": {
+      en: "/business",
+      ar: "/رجال_الأعمال",
     },
     "/register": {
       en: "/register",

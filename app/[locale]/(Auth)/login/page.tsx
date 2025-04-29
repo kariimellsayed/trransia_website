@@ -5,13 +5,14 @@ import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import LoginWithEmail from "./LoginWithEmail";
 import LoginWithPhone from "./LoginWithPhone";
+import Back from "../../_components/ui/Back";
 
 const RegisterPage = () => {
   const t = useTranslations("Taps.log");
   const locale = useLocale();
 
   return (
-    <div className="min-h-screen flex items-center justify-center padding">
+    <div className="min-h-screen flex items-center justify-center padding relative">
       <div className="w-full max-w-4xl">
         <Tabs
           defaultValue="phone"
@@ -57,6 +58,13 @@ const RegisterPage = () => {
             <LoginWithPhone />
           </TabsContent>
         </Tabs>
+      </div>
+
+      {/* Back */}
+      <div
+        className={`absolute top-5 ${locale === "ar" ? "right-5" : "left-5"}`}
+      >
+        <Back />
       </div>
     </div>
   );

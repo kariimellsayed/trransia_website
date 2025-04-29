@@ -23,7 +23,7 @@ const FormElectronic = () => {
   const t = useTranslations("Electronic");
   const locale = useLocale();
 
-  // التعامل مع إرسال الفورم
+  // Form
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -33,24 +33,16 @@ const FormElectronic = () => {
       return;
     }
 
-    // إذا كل شيء صحيح، بنكوّن رسالة واتساب
-    const message = `
-طلب خدمة تسويق الكتروني جديد:
-- نوع الخدمة: ${serviceType}
-${notes ? `- الملاحظات: ${notes}` : ""}
-    `.trim();
+    // const whatsappNumber = "966569366161";
 
-    // كوّن رابط واتساب
-    const whatsappNumber = "201064689587"; // ضع رقم واتساب هنا مع كود الدولة بدون +
-    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-      message
-    )}`;
-
-    // افتح رابط واتساب في نافذة جديدة
-    window.open(whatsappUrl, "_blank");
+    //
+    //
+    //Logic
+    //
+    //
 
     // عرض رسالة نجاح
-    toast.success("تم تجهيز الرسالة بنجاح! سيتم فتح واتساب الآن.");
+    toast.success("تم ارسال الطلب بنجاح");
 
     // إعادة تعيين الفورم بعد الإرسال
     setServiceType("");

@@ -144,12 +144,11 @@
   }
 
   ::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: #ddd;
   }
 
   ::-webkit-scrollbar-thumb {
     background: linear-gradient(to bottom, #ee1d23, #231f20);
-    border-radius: 10px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
@@ -209,7 +208,7 @@
   }
 
   .padding-y {
-    @apply py-8 sm:py-12 md:py-16;
+    @apply py-16 md:py-24 lg:py-32;
   }
 
   /* Heading */

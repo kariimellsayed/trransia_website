@@ -3,7 +3,7 @@ import FormTranslate from "./FormTranslate";
 import { availableLanguages } from "@/data";
 import { getTranslations } from "next-intl/server";
 import { Metadata } from "next";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import ContactButton from "@/components/ui/ContactButton";
 
 // MetaData
@@ -25,6 +25,8 @@ export async function generateMetadata(): Promise<Metadata> {
 
 const Translate = () => {
   const t = useTranslations("Translate");
+  const locale = useLocale();
+
   return (
     <main className="relative min-h-screen w-full padding">
       {/* Background Image */}
@@ -87,9 +89,9 @@ const Translate = () => {
             className="p-5 bg-white/50 rounded-xl w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 border 
              border-primary shadow-2xl"
           >
-            {availableLanguages.map((lang) => (
-              <p key={lang} className="text-lg text-brandblack font-medium">
-                {lang}
+            {availableLanguages.map((lang, idx) => (
+              <p key={idx} className="text-lg text-brandblack font-medium">
+                {locale === "ar" ? lang.ar : lang.en}
               </p>
             ))}
           </div>

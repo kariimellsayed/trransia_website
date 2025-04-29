@@ -1,37 +1,33 @@
 "use client";
 
 import { useState } from "react";
+
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import { Link } from "@/i18n/navigation";
 
-const RegisterWithPhone = () => {
-  const t = useTranslations("RegisterWithPhone");
+const LoginWithPhone = () => {
+  const t = useTranslations("LoginWithPhone");
   const locale = useLocale();
 
-  const [phone, setPhone] = useState<string>(""); // رقم التليفون
-  const [password, setPassword] = useState<string>(""); // كلمة المرور
-  const [showPassword, setShowPassword] = useState<boolean>(false);
+  const [phone, setPhone] = useState("");
+  const [password, setPassword] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleRegister = async (e: React.FormEvent) => {
     e.preventDefault();
-
-    // هنا هتبعت البيانات للـ backend
-    const dataToSend = {
-      phone, // الرقم بيكون جاهز بصيغة دولية
-      password,
-    };
-
-    console.log("Form Data:", dataToSend);
-
-    // تقدر تبعتهم بالـ fetch أو axios
+    setIsLoading(true);
+    setError("");
   };
 
   return (
     <div className="min-h-screen flex items-center justify-center padding">
       <div className="w-full max-w-xl">
+        {/* Logo */}
         <div className="flex justify-center items-center">
           <Image
             src={"/auth-logo.svg"}
@@ -47,10 +43,9 @@ const RegisterWithPhone = () => {
         </h2>
 
         <form
-          onSubmit={handleSubmit}
+          onSubmit={handleRegister}
           className="mt-14 space-y-6 animate-fadeInUp"
         >
-          {/* رقم الموبايل */}
           <div className="flex justify-start flex-col space-y-2">
             <label
               htmlFor="phone"
@@ -75,7 +70,6 @@ const RegisterWithPhone = () => {
             />
           </div>
 
-          {/* كلمة المرور */}
           <div className="flex justify-start flex-col space-y-2">
             <label
               htmlFor="pass"
@@ -88,7 +82,7 @@ const RegisterWithPhone = () => {
                 id="pass"
                 className="rounded-xl w-full border-2 border-brandgray px-4 py-2 text-brandgray text-sm font-normal"
                 type={showPassword ? "text" : "password"}
-                placeholder={t("place3")}
+                placeholder={t("place2")}
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               />
@@ -98,25 +92,47 @@ const RegisterWithPhone = () => {
                   locale === "ar" ? "left-3" : "right-3"
                 } transform -translate-y-1/2 cursor-pointer text-zinc-500`}
               >
-                <span className="text-base text-brandgray font-normal">
-                  {showPassword ? t("eye2") : t("eye1")}
-                </span>
+                {showPassword ? (
+                  <span className="text-base text-brandgray font-normal">
+                    {t("eye2")}
+                  </span>
+                ) : (
+                  <span className="text-base text-brandgray font-normal">
+                    {t("eye1")}
+                  </span>
+                )}
               </div>
             </div>
           </div>
 
+          <div className="flex items-center justify-between text-sm">
+            <label className="flex items-center gap-2">
+              <input type="checkbox" className="accent-primary" />
+              <span className="text-brandblack font-medium">{t("rem")}</span>
+            </label>
+            <Link
+              href="/forgot-password"
+              className="text-blue-600 hover:underline font-medium"
+            >
+              {t("forgot")}
+            </Link>
+          </div>
+
+          {error && <p className="text-red-500 text-sm text-center">{error}</p>}
+
           <button
             type="submit"
-            className="w-full cursor-pointer bg-brandred rounded-4xl transition-all duration-200 hover:bg-red-700 py-2 text-white font-normal text-xl text-center"
+            className="w-full cursor-pointer bg-brandred rounded-4xl transition-all duration-200 hover:bg-red-700
+            py-2 text-white font-normal text-xl text-center"
           >
-            {t("create")}
+            {isLoading ? t("loading") : t("inter")}
           </button>
         </form>
 
         <p className="text-base text-brandblack text-center mt-10">
-          {t("log")}{" "}
+          {t("sign")}{" "}
           <Link
-            href="/login"
+            href="/register"
             className="text-blue-600 hover:underline font-medium"
           >
             {t("link")}
@@ -127,4 +143,4 @@ const RegisterWithPhone = () => {
   );
 };
 
-export default RegisterWithPhone;
+export default LoginWithPhone;

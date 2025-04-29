@@ -4,7 +4,7 @@ import Image from "next/image";
 const Hero = () => {
   const t = useTranslations("Hero");
   return (
-    <section className="relative w-full padding-y">
+    <section className="relative w-full padding-y animate-slideIn">
       <div className="flex flex-col mx-auto sm:flex-row items-center justify-between gap-8">
         {/* Texts */}
         <div className="sm:w-1/2 w-full flex flex-col items-start justify-center gap-10">
@@ -16,7 +16,8 @@ const Hero = () => {
             href="https://wa.me/966544214748"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-primary hover:bg-red-600 text-white px-8 py-3 rounded-full transition duration-300 font-semibold"
+            className="bg-primary hover:bg-red-600 hover:px-11 text-white px-8 py-3 rounded-full
+             transition-all duration-300 font-semibold"
           >
             {t("link")}
           </a>
@@ -29,7 +30,8 @@ const Hero = () => {
             alt="Transia Services Seo Electronics"
             width={370}
             height={370}
-            className="object-contain sm:object-cover"
+            className="object-contain sm:object-cover max-w-full h-auto transition-transform duration-300 hover:scale-105
+             animate-slideIn"
           />
         </div>
       </div>

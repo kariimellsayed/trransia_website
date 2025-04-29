@@ -8,7 +8,7 @@ const Services = () => {
   return (
     <section className="relative w-full">
       <div className="flex flex-col justify-center items-center gap-3 mx-auto">
-        <h1 className="heading">{t("title")}</h1>
+        <h1 className="heading animate-fadeIn">{t("title")}</h1>
         <p className="text-xl sm:text-2xl text-center font-normal text-brandblack leading-8">
           {t("des")}
         </p>

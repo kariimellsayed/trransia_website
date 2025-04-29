@@ -17,6 +17,7 @@ import {
 import LanguageSwitcher from "./ui/LanguageSwitcher";
 import CustomDropdownMenu from "./ui/CustomDropdown";
 import Account from "./ui/Account";
+import { ChevronDown } from "lucide-react";
 
 const Navbar = () => {
   const t = useTranslations("Navbar");
@@ -28,7 +29,7 @@ const Navbar = () => {
     <header className="w-full border-b border-[0.5px] border-brandgray shadow-xl shadow-red-50 bg-white">
       <div className="mx-auto flex justify-between items-center padding-x py-2">
         {/* Logo */}
-        <Link href="/home">
+        <Link href="/">
           <Image
             src="/nav-logo.svg"
             alt="logo"
@@ -80,12 +81,7 @@ const Navbar = () => {
                        border-primary focus:outline-none focus:ring-0 focus-visible:ring-0 w-full justify-center px-7 py-3 rounded-xl duration-200"
                     >
                       {t(link.key)}
-                      <Image
-                        src="/drop-icon.svg"
-                        alt="services"
-                        width={12}
-                        height={6}
-                      />
+                      <ChevronDown size={16} />
                     </span>
                   </DropdownMenuTrigger>
 

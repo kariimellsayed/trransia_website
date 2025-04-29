@@ -16,7 +16,7 @@ const ServicesGrid = () => {
 
         return (
           <Link
-            href={service.href ? service.href : "#"}
+            href={service.href}
             key={service.key}
             className={`bg-white border-[0.5px] border-red-300 shadow-2xl rounded-4xl p-4 flex flex-col items-center
                  justify-center duration-200 hover:scale-105 z-10 ${spanClass} animate-fadeInUp`}

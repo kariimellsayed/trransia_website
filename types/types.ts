@@ -9,9 +9,9 @@ export type ValidPathnames =
   | "/tech"
   | "/student"
   | "/electronic"
-  | "/service7"
-  | "/service8"
-  | "/service9";
+  | "/screens"
+  | "/gifts"
+  | "/business";
 
 export interface NavLink {
   key: string;

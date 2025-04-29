@@ -10,17 +10,17 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
-import { StickyNote, X } from "lucide-react";
+import { StickyNote } from "lucide-react";
 import { toast } from "sonner";
 import { useLocale, useTranslations } from "next-intl";
 
-// لستة خدمات تقنية المعلومات
-const itServices = ["app", "web", "uiux", "data"];
+// Services
+const services = ["service1", "service2", "service3", "service4", "other"];
 
-const FormTech = () => {
+const FormScreens = () => {
   const [serviceType, setServiceType] = useState<string>("");
   const [notes, setNotes] = useState<string>("");
-  const t = useTranslations("Tech.it");
+  const t = useTranslations("Screens");
   const locale = useLocale();
 
   // Form
@@ -48,11 +48,12 @@ const FormTech = () => {
     setServiceType("");
     setNotes("");
   };
+
   return (
     <div
       className="relative bg-white/90 backdrop-blur-md border p-8 rounded-xl shadow-xl shadow-primary/30 w-full max-w-4xl
       mx-auto mt-10 animate-slideIn"
-      id="tech"
+      id="screen"
     >
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* نوع الخدمة */}
@@ -68,11 +69,15 @@ const FormTech = () => {
             value={serviceType}
             dir={locale === "ar" ? "rtl" : "ltr"}
           >
-            <SelectTrigger id="serviceType" className="w-full rounded-lg">
+            <SelectTrigger
+              id="serviceType"
+              className="w-full rounded-lg transition-all duration-200 hover:shadow-sm
+              hover:shadow-primary"
+            >
               <SelectValue placeholder="اختر نوع الخدمة" />
             </SelectTrigger>
             <SelectContent>
-              {itServices.map((service) => (
+              {services.map((service) => (
                 <SelectItem
                   key={service}
                   value={service}
@@ -105,7 +110,7 @@ const FormTech = () => {
           <Button
             type="submit"
             className="w-full bg-primary hover:bg-red-600 transition-all duration-200 rounded-xl font-semibold
-                    cursor-pointer"
+            cursor-pointer"
           >
             تنفيذ الطلب
           </Button>
@@ -115,4 +120,4 @@ const FormTech = () => {
   );
 };
 
-export default FormTech;
+export default FormScreens;

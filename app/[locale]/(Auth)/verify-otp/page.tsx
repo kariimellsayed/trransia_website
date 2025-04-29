@@ -5,12 +5,11 @@ import {
   InputOTPGroup,
   InputOTPSlot,
 } from "@/components/ui/input-otp";
-import { useLocale, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 
 const Otp = () => {
   const t = useTranslations("Otp");
-  const locale = useLocale();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();

@@ -17,24 +17,24 @@ export const navLinks: NavLink[] = [
       { key: "service4", href: "/tech" },
       { key: "service5", href: "/student" },
       { key: "service6", href: "/electronic" },
-      { key: "service7", href: "/service7" },
-      { key: "service8", href: "/service8" },
-      { key: "service9", href: "/service9" },
+      { key: "service7", href: "/screens" },
+      { key: "service8", href: "/gifts" },
+      { key: "service9", href: "/business" },
     ],
   },
 ];
 
-// Services
+// Services In Main Page
 export const services = [
   { key: "serve1", img: "/trans.svg", href: "/translate" },
   { key: "serve2", img: "/student.svg", href: "/student" },
   { key: "serve3", img: "/ad.svg", href: "/ads" },
   { key: "serve4", img: "/marketing.svg", href: "/marketing" },
-  { key: "serve5", img: "/elec.svg" },
+  { key: "serve5", img: "/elec.svg", href: "/electronic" },
   { key: "serve6", img: "/tech.svg", href: "/tech" },
-  { key: "serve7", img: "/gifts.svg" },
-  { key: "serve8", img: "/print.svg" },
-  { key: "serve9", img: "/business.svg" },
+  { key: "serve7", img: "/gifts.svg", href: "/gifts" },
+  { key: "serve8", img: "/screen.svg", href: "/screens" },
+  { key: "serve9", img: "/business.svg", href: "/business" },
 ];
 
 // ServicesSection
@@ -44,10 +44,10 @@ export const servicesCards: ServicesCards[] = [
   { key: "tech", img: "/serv4.png", href: "/tech" },
   { key: "marketing", img: "/serv5.png", href: "/marketing" },
   { key: "student", img: "/serv6.png", href: "/student" },
-  { key: "elec", img: "/serv7.png" },
-  { key: "print", img: "/serv8.png" },
-  { key: "gifts", img: "/serv9.png" },
-  { key: "business", img: "/serv3.png" },
+  { key: "elec", img: "/serv7.png", href: "/electronic" },
+  { key: "screen", img: "/screen.svg", href: "/screens" },
+  { key: "gifts", img: "/serv9.png", href: "/gifts" },
+  { key: "business", img: "/serv3.png", href: "/business" },
 ];
 
 // Banners
@@ -112,56 +112,37 @@ export const aboutTitles = [
 // Translate Page
 // لستة اللغات المتوفرة
 export const availableLanguages = [
-  "الأذربيجانية",
-  "الأرمينية",
-  "الأردية",
-  "الأوكرانية",
-  "الألبانية",
-  "الألمانية",
-  "الإنجليزية",
-  "الإيطالية",
-  "الإندونيسية",
-  "الإسبانية",
-  "الاستونية",
-  "الإيسلندية",
-  "الباشتو",
-  "البرتغالية",
-  "البلغارية",
-  "البنغالية",
-  "البولندية",
-  "البوسنية",
-  "التايلاندية",
-  "التركية",
-  "التشيكية",
-  "الصينية",
-  "الدانماركية",
-  "الرومانية",
-  "الروسية",
-  "السويدية",
-  "السنهالية",
-  "السلوفاكية",
-  "السلوفينية",
-  "الصربية",
-  "الصومالية",
-  "العربية",
-  "العبرية",
-  "الفارسية",
-  "الفلبينية",
-  "الفنلندية",
-  "الفرنسية",
-  "الكردية",
-  "الكرواتية",
-  "الكورية",
-  "اللاتينية",
-  "الماليزية",
-  "المجرية",
-  "المقدونية",
-  "المنغولية",
-  "النرويجية",
-  "الهولندية",
-  "الهندية",
-  "اليابانية",
-  "اليونانية",
+  { ar: "العربية", en: "Arabic" },
+  { ar: "الإنجليزية", en: "English" },
+  { ar: "الفرنسية", en: "French" },
+  { ar: "الإيطالية", en: "Italian" },
+  { ar: "الإسبانية", en: "Spanish" },
+  { ar: "البرتغالية", en: "Portuguese" },
+  { ar: "الألمانية", en: "German" },
+  { ar: "الروسية", en: "Russian" },
+  { ar: "الصينية", en: "Chinese" },
+  { ar: "اليابانية", en: "Japanese" },
+  { ar: "الكورية", en: "Korean" },
+  { ar: "الهندية", en: "Hindi" },
+  { ar: "التركية", en: "Turkish" },
+  { ar: "الهولندية", en: "Dutch" },
+  { ar: "السويدية", en: "Swedish" },
+  { ar: "النرويجية", en: "Norwegian" },
+  { ar: "الدنماركية", en: "Danish" },
+  { ar: "البولندية", en: "Polish" },
+  { ar: "التشيكية", en: "Czech" },
+  { ar: "الفنلندية", en: "Finnish" },
+  { ar: "اليونانية", en: "Greek" },
+  { ar: "الرومانية", en: "Romanian" },
+  { ar: "المجرية", en: "Hungarian" },
+  { ar: "التايلاندية", en: "Thai" },
+  { ar: "الفيتنامية", en: "Vietnamese" },
+  { ar: "الإندونيسية", en: "Indonesian" },
+  { ar: "الماليزية", en: "Malay" },
+  { ar: "الأوكرانية", en: "Ukrainian" },
+  { ar: "العبرية", en: "Hebrew" },
+  { ar: "البنغالية", en: "Bengali" },
+  { ar: "السواحلية", en: "Swahili" },
 ];
 
 // Tech Page
@@ -231,10 +212,23 @@ export const students = [
 ];
 
 // Electronics Services
-
 export const electronics = [
   { title: "service1", description: "service1des", image: "/ecommerce.png" },
   { title: "service2", description: "service2des", image: "/booking.png" },
   { title: "service3", description: "service3des", image: "/payment.png" },
   { title: "service4", description: "service3des", image: "/eforms.png" },
+];
+
+// Gifts Services
+export const gifts = [
+  { title: "service1", description: "service1des", image: "/gifts1.png" },
+  { title: "service2", description: "service2des", image: "/gifts2.png" },
+  { title: "service3", description: "service3des", image: "/gifts3.png" },
+];
+
+// Business Services
+export const business = [
+  { title: "service1", description: "service1des", image: "/business1.png" },
+  { title: "service2", description: "service2des", image: "/business2.png" },
+  { title: "service3", description: "service3des", image: "/business3.png" },
 ];

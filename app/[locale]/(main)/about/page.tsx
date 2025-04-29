@@ -27,7 +27,7 @@ export default function About() {
   return (
     <section className="relative padding w-full">
       {/* Main */}
-      <div className="flex flex-col mx-auto sm:flex-row items-center justify-between gap-8">
+      <div className="flex flex-col mx-auto sm:flex-row items-center justify-between gap-8 animate-slideIn">
         {/* Texts */}
         <div className="sm:w-1/2 w-full flex flex-col items-start justify-center gap-10">
           <h1 className="heading">{t("title")}</h1>
@@ -42,7 +42,8 @@ export default function About() {
             alt="Transia Services Seo Electronics About Us Translation"
             width={370}
             height={370}
-            className="object-contain sm:object-cover"
+            className="object-contain sm:object-cover max-w-full h-auto transition-transform duration-300 hover:scale-105
+             animate-slideIn"
           />
         </div>
       </div>

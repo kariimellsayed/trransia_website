@@ -1,31 +1,37 @@
 "use client";
 
 import { useState } from "react";
-
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 import { Link } from "@/i18n/navigation";
 
-const LoginWithPhone = () => {
-  const t = useTranslations("LoginWithPhone");
+const RegisterWithPhone = () => {
+  const t = useTranslations("RegisterWithPhone");
   const locale = useLocale();
 
-  const [phone, setPhone] = useState("");
-  const [password, setPassword] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState("");
-  const [showPassword, setShowPassword] = useState(false);
+  const [phone, setPhone] = useState<string>(""); // رقم التليفون
+  const [password, setPassword] = useState<string>(""); // كلمة المرور
+  const [showPassword, setShowPassword] = useState<boolean>(false);
 
-  const handleRegister = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setIsLoading(true);
-    setError("");
+
+    // هنا هتبعت البيانات للـ backend
+    const dataToSend = {
+      phone, // الرقم بيكون جاهز بصيغة دولية
+      password,
+    };
+
+    console.log("Form Data:", dataToSend);
+
+    // تقدر تبعتهم بالـ fetch أو axios
   };
 
   return (
     <div className="min-h-screen flex items-center justify-center padding">
       <div className="w-full max-w-xl">
-        {/* Logo */}
         <div className="flex justify-center items-center">
           <Image
             src={"/auth-logo.svg"}
@@ -41,9 +47,10 @@ const LoginWithPhone = () => {
         </h2>
 
         <form
-          onSubmit={handleRegister}
+          onSubmit={handleSubmit}
           className="mt-14 space-y-6 animate-fadeInUp"
         >
+          {/* رقم الموبايل */}
           <div className="flex justify-start flex-col space-y-2">
             <label
               htmlFor="phone"
@@ -51,17 +58,24 @@ const LoginWithPhone = () => {
             >
               {t("phone")}
             </label>
-            <input
-              type="tel"
-              id="phone"
-              className="rounded-xl w-full border-2 border-brandgray px-4 py-2 text-brandgray text-sm font-normal"
-              placeholder={t("place1")}
+            <PhoneInput
+              country={"sa"}
               value={phone}
-              onChange={(e) => setPhone(e.target.value)}
-              required
+              onChange={(phone) => setPhone(phone)}
+              inputClass="!w-full !rounded-xl !border !border-brandgray !py-2 !pl-20 !text-sm !text-brandblack
+              !focus:outline-none !focus:border-brandred !placeholder-black-300"
+              containerClass="!w-full !relative"
+              buttonClass="!absolute !left-4 !top-1/2 !-translate-y-1/2 !bg-transparent !border-none !p-0 !m-0"
+              dropdownClass="!rounded-xl !mt-2 !left-1/2"
+              inputProps={{
+                placeholder: t("place2"),
+                name: "phone",
+                required: true,
+              }}
             />
           </div>
 
+          {/* كلمة المرور */}
           <div className="flex justify-start flex-col space-y-2">
             <label
               htmlFor="pass"
@@ -74,7 +88,7 @@ const LoginWithPhone = () => {
                 id="pass"
                 className="rounded-xl w-full border-2 border-brandgray px-4 py-2 text-brandgray text-sm font-normal"
                 type={showPassword ? "text" : "password"}
-                placeholder={t("place2")}
+                placeholder={t("place3")}
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               />
@@ -84,47 +98,26 @@ const LoginWithPhone = () => {
                   locale === "ar" ? "left-3" : "right-3"
                 } transform -translate-y-1/2 cursor-pointer text-zinc-500`}
               >
-                {showPassword ? (
-                  <span className="text-base text-brandgray font-normal">
-                    {t("eye2")}
-                  </span>
-                ) : (
-                  <span className="text-base text-brandgray font-normal">
-                    {t("eye1")}
-                  </span>
-                )}
+                <span className="text-base text-brandgray font-normal">
+                  {showPassword ? t("eye2") : t("eye1")}
+                </span>
               </div>
             </div>
           </div>
 
-          <div className="flex items-center justify-between text-sm">
-            <label className="flex items-center gap-2">
-              <input type="checkbox" className="accent-primary" />
-              <span className="text-brandblack font-medium">{t("rem")}</span>
-            </label>
-            <Link
-              href="/forgot-password"
-              className="text-blue-600 hover:underline font-medium"
-            >
-              {t("forgot")}
-            </Link>
-          </div>
-
-          {error && <p className="text-red-500 text-sm text-center">{error}</p>}
-
           <button
             type="submit"
-            className="w-full cursor-pointer bg-brandred rounded-4xl transition-all duration-200 hover:bg-red-700
-            py-2 text-white font-normal text-xl text-center"
+            className="w-full cursor-pointer bg-brandred rounded-4xl transition-all duration-200
+             hover:bg-red-700 py-2 text-white font-normal text-xl text-center"
           >
-            {isLoading ? t("loading") : t("inter")}
+            {t("create")}
           </button>
         </form>
 
         <p className="text-base text-brandblack text-center mt-10">
-          {t("sign")}{" "}
+          {t("log")}{" "}
           <Link
-            href="/register"
+            href="/login"
             className="text-blue-600 hover:underline font-medium"
           >
             {t("link")}
@@ -135,4 +128,4 @@ const LoginWithPhone = () => {
   );
 };
 
-export default LoginWithPhone;
+export default RegisterWithPhone;

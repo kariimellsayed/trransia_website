@@ -11,7 +11,7 @@ const FormStudent = () => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [notes, setNotes] = useState<string>("");
 
-  const WHATSAPP_NUMBER = "201064689587"; // 👈🏻 غيّر الرقم هنا لرقم خدمة العملاء
+  // const WHATSAPP_NUMBER = "966569366161";
 
   // Change in File
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -29,39 +29,17 @@ const FormStudent = () => {
     e.preventDefault();
     // null File
     if (!selectedFile) {
-      toast.error("الرجاء إرفاق ملف للترجمة.");
+      toast.error("الرجاء إرفاق ملف.");
       return;
     }
 
-    const now = new Date().toLocaleString("ar-SA", {
-      timeZone: "Asia/Riyadh", // ✅ توقيت السعودية
-      weekday: "long",
-      year: "numeric",
-      month: "long",
-      day: "numeric",
-      hour: "numeric",
-      minute: "numeric",
-    });
+    //
+    //
+    //Logic
+    //
+    //
 
-    const message = `📬 *خدمة طالب*
-      
-      🕒 *التاريخ والوقت:* ${now}
-      
-
-      📝 *ملاحظات العميل:*
-      ${notes.trim() !== "" ? `- ${notes}` : "- لا توجد ملاحظات"}
-      
-      📁 *الملف تم إرفاقه بواسطة العميل وسيتم إرساله لكم عند التأكيد.*
-      
-      📞 برجاء مراجعة البيانات والتواصل مع العميل في أقرب وقت ممكن.
-      
-      🔒 *جميع البيانات سرية وتحتفظ بها إدارة المنصة فقط.*`;
-
-    const encodedMessage = encodeURIComponent(message);
-    const whatsappLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
-
-    window.open(whatsappLink, "_blank");
-    toast.success("تم تجهيز الرسالة بنجاح! سيتم فتح واتساب الآن.");
+    toast.success("تم إرسال الطلب بنجاح");
   };
 
   return (
