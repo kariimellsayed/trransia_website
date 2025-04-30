@@ -6,7 +6,7 @@ import Image from "next/image";
 import React from "react";
 import FormMarket from "./FormMarketing";
 import { TrendingUp, Users, Award } from "lucide-react";
-import ContactButton from "@/components/ui/ContactButton";
+import ContactButton from "@/app/[locale]/_components/ui/ContactButton";
 
 // MetaData
 export async function generateMetadata(): Promise<Metadata> {

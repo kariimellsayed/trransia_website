@@ -309,16 +309,16 @@
     "our3": "University Research & Report Writing: Whether you need help writing a research paper or a university report, we deliver high-quality academic content, ready for submission, and always on time.",
     "end": "We are here to provide you with the best support throughout your academic path, helping you achieve your educational goals with ease and professionalism.",
 
-    "service1": "Academic Research Writing",
-    "service2": "Presentation Preparation",
-    "service3": "Engineering Blueprint Printing",
-    "service4": "Copying and Printing",
+    "service1": "Copying and Printing",
+    "service2": "Academic Research Writing",
+    "service3": "Presentation Preparation",
+    "service4": "Engineering Blueprint Printing",
     "other": "other",
 
-    "service1des": "We help you write professional academic research that meets university standards.",
-    "service2des": "We design engaging and organized presentations to help you present your ideas",
-    "service3des": "We print your engineering blueprints with high precision using the latest technology",
-    "service4des": "We offer high-quality copying and printing services with fast turnaround, supporting all sizes and types to meet students’ academic needs."
+    "service1des": "We offer high-quality copying and printing services with fast turnaround, supporting all sizes and types to meet students’ academic needs.",
+    "service2des": "We help you write professional academic research that meets university standards.",
+    "service3des": "We design engaging and organized presentations to help you present your ideas",
+    "service4des": "We print your engineering blueprints with high precision using the latest technology"
   },
   "Marketing": {
     "title": "Digital Marketing",

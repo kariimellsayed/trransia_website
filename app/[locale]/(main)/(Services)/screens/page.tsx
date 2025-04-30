@@ -2,7 +2,7 @@ import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import React from "react";
 import { Metadata } from "next";
-import ContactButton from "@/components/ui/ContactButton";
+import ContactButton from "@/app/[locale]/_components/ui/ContactButton";
 import { Monitor, Award, Users } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";

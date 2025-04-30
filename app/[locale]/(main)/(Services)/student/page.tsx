@@ -4,8 +4,9 @@ import React from "react";
 import FormStudent from "./FormStudent";
 import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
-import ContactButton from "@/components/ui/ContactButton";
+import ContactButton from "@/app/[locale]/_components/ui/ContactButton";
 import { students } from "@/data";
+import { Link } from "@/i18n/navigation";
 
 // MetaData
 export async function generateMetadata(): Promise<Metadata> {
@@ -103,12 +104,22 @@ const Student = () => {
                   <p className="text-gray-800 text-base">
                     {t(student.description)}
                   </p>
-                  <a
-                    href={"#student"}
-                    className="self-start bg-primary hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-full transition-all duration-300"
-                  >
-                    {t("order")}
-                  </a>
+
+                  {student.href ? (
+                    <Link
+                      href="/student/print"
+                      className="self-start bg-primary hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-full transition-all duration-300"
+                    >
+                      {t("order")}
+                    </Link>
+                  ) : (
+                    <a
+                      href="#student"
+                      className="self-start bg-primary hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-full transition-all duration-300"
+                    >
+                      {t("order")}
+                    </a>
+                  )}
                 </div>
               </div>
             ))}

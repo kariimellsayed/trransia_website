@@ -3,7 +3,7 @@ import Image from "next/image";
 import React from "react";
 import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
-import ContactButton from "@/components/ui/ContactButton";
+import ContactButton from "@/app/[locale]/_components/ui/ContactButton";
 import { electronics } from "@/data";
 import FormElectronic from "./FormElectronic";
 

@@ -4,7 +4,7 @@ import { availableLanguages } from "@/data";
 import { getTranslations } from "next-intl/server";
 import { Metadata } from "next";
 import { useLocale, useTranslations } from "next-intl";
-import ContactButton from "@/components/ui/ContactButton";
+import ContactButton from "@/app/[locale]/_components/ui/ContactButton";
 
 // MetaData
 export async function generateMetadata(): Promise<Metadata> {

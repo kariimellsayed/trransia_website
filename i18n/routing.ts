@@ -74,5 +74,9 @@ export const routing = defineRouting({
       en: "/verify-otp",
       ar: "/التحقق",
     },
+    "/student/print": {
+      en: "/student/print",
+      ar: "/نسخ_تصوير/خدمة_طالب",
+    },
   },
 });

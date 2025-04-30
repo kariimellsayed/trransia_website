@@ -139,16 +139,16 @@ const FormTranslate = () => {
         </div>
 
         {/* زر التنفيذ */}
-        <div className="animate-slideIn delay-500">
-          <Button
-            type="submit"
-            disabled={!sourceLang || !targetLang || !selectedFile}
-            className="w-full bg-primary hover:bg-red-600 transition-all duration-200 rounded-xl font-semibold
-             cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
-          >
-            تنفيذ الطلب
-          </Button>
-        </div>
+        {sourceLang && targetLang && selectedFile && (
+          <div className="animate-slideIn delay-500">
+            <Button
+              type="submit"
+              className="w-full bg-primary hover:bg-red-600 transition-all duration-200 rounded-xl font-semibold"
+            >
+              تنفيذ الطلب
+            </Button>
+          </div>
+        )}
       </form>
     </div>
   );

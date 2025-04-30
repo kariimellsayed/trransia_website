@@ -205,10 +205,15 @@ export const ads = [
 
 // Student
 export const students = [
-  { title: "service1", description: "service1des", image: "/reserch.png" },
-  { title: "service2", description: "service2des", image: "/prisnts.png" },
-  { title: "service3", description: "service3des", image: "/paint.png" },
-  { title: "service4", description: "service3des", image: "/print.png" },
+  {
+    title: "service1",
+    description: "service1des",
+    image: "/print.png",
+    href: true,
+  },
+  { title: "service2", description: "service2des", image: "/reserch.png" },
+  { title: "service3", description: "service3des", image: "/prisnts.png" },
+  { title: "service4", description: "service4des", image: "/paint.png" },
 ];
 
 // Electronics Services

@@ -4,7 +4,7 @@ import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { ads } from "@/data";
 import FormAds from "./FormAds";
-import ContactButton from "@/components/ui/ContactButton";
+import ContactButton from "@/app/[locale]/_components/ui/ContactButton";
 
 // MetaData
 export async function generateMetadata(): Promise<Metadata> {
