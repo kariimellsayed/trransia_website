@@ -111,7 +111,7 @@ const Gifts = () => {
                  shadow-md hover:shadow-lg hover:shadow-primary/20 transition-all duration-300 animate-slideIn overflow-hidden"
               >
                 {/* Card Image */}
-                <div className="relative w-full h-52">
+                <div className="relative w-full h-64">
                   <Image
                     src={gift.image}
                     alt={t(gift.title)}

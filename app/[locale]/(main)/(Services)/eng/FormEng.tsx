@@ -7,13 +7,10 @@ import { useLocale } from "next-intl";
 import { Input } from "@/components/ui/input";
 import { Upload } from "lucide-react";
 
-const Print = () => {
+const FormEng = () => {
   const [paperSize, setPaperSize] = useState("");
-  const [paperType, setPaperType] = useState("");
   const [paperColor, setPaperColor] = useState("");
-  const [coverType, setCoverType] = useState("");
   const [layout, setLayout] = useState("");
-  const [paperSide, setPaperSide] = useState("");
   const [file, setFile] = useState<File | null>(null); // State لتخزين الملف
   const locale = useLocale();
 
@@ -28,20 +25,10 @@ const Print = () => {
   const cover = [
     { id: 1, img: "/cover1.png", title: "بدون تغليف", paper: "غير محدود" },
     { id: 2, img: "/cover2.png", title: "كيس شفاف", paper: "1 إلى 50" },
-    { id: 3, img: "/cover3.png", title: "تدبيس ركن", paper: "2 إلى 100" },
-    { id: 4, img: "/cover4.png", title: "تدبيس جانبي", paper: "2 إلى 100" },
-    { id: 5, img: "/cover5.png", title: "سلك", paper: "2 إلى 300" },
-    { id: 6, img: "/cover6.png", title: "بلاستيك حلزوني", paper: "10 إلى 200" },
-    { id: 7, img: "/cover7.png", title: "تخييط", paper: "100 إلى 600" },
-    { id: 8, img: "/cover8.png", title: "كعب مسمار", paper: "15 إلى 200" },
-    { id: 9, img: "/cover9.png", title: "كعب حراري", paper: "10 إلى 100" },
-    { id: 10, img: "/cover10.png", title: "ملف خرمين", paper: "1 إلى 500" },
-    { id: 11, img: "/cover11.png", title: "ملف 3 اخرام", paper: "1 إلى 600" },
-    { id: 12, img: "/cover12.png", title: "حافظ انبوبي", paper: "1 إلى 5" },
   ];
 
-  const isFormValid =
-    paperSize && paperType && paperColor && coverType && layout && paperSide;
+  // التحقق من صحة الفورم (حقل الملف اختياري، مش هيأثر على التحقق)
+  const isFormValid = paperSize && paperColor && layout;
 
   // التعامل مع رفع الملف
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -57,11 +44,8 @@ const Print = () => {
     e.preventDefault();
     const data = {
       paperSize,
-      paperType,
       paperColor,
-      paperShape: coverType,
-      paperSide,
-      coverType: layout,
+      layout,
       file, // إضافة الملف للبيانات المرسلة
     };
 
@@ -70,6 +54,7 @@ const Print = () => {
     // Logic
     //
     //
+    console.log(data); // مجرد مثال لعرض البيانات في الـ console
   };
 
   return (
@@ -90,7 +75,7 @@ const Print = () => {
               onValueChange={(value) => value && setPaperSize(value)}
               className="flex flex-wrap gap-2 w-full"
             >
-              {["A0", "A1", "A2", "A3", "A4", "A5"].map((size) => (
+              {["A0", "A1", "A2"].map((size) => (
                 <ToggleGroupItem
                   key={size}
                   value={size}
@@ -98,31 +83,6 @@ const Print = () => {
                   hover:bg-primary hover:text-white data-[state=on]:bg-primary data-[state=on]:text-white"
                 >
                   {size}
-                </ToggleGroupItem>
-              ))}
-            </ToggleGroup>
-          </div>
-
-          {/* نوع الورق */}
-          <div className="flex flex-col items-start gap-3 w-full">
-            <h3 className="text-lg font-semibold mb-2 text-primary">
-              نوع الورق :
-            </h3>
-            <ToggleGroup
-              dir={locale === "ar" ? "rtl" : "ltr"}
-              type="single"
-              value={paperType}
-              onValueChange={(value) => value && setPaperType(value)}
-              className="flex flex-wrap gap-2 w-full"
-            >
-              {["عادي", "لماع", "لاصق", "مقوى", "فلم أبيض"].map((type) => (
-                <ToggleGroupItem
-                  key={type}
-                  value={type}
-                  className="py-2 px-8 border border-gray-300 rounded-sm transition-all duration-200
-                  hover:bg-primary hover:text-white data-[state=on]:bg-primary data-[state=on]:text-white"
-                >
-                  {type}
                 </ToggleGroupItem>
               ))}
             </ToggleGroup>
@@ -148,65 +108,6 @@ const Print = () => {
                   hover:bg-primary hover:text-white data-[state=on]:bg-primary data-[state=on]:text-white"
                 >
                   {color}
-                </ToggleGroupItem>
-              ))}
-            </ToggleGroup>
-          </div>
-
-          {/* تخطيط الورق */}
-          <div className="w-full">
-            <h3 className="text-lg font-semibold mb-4 text-primary">
-              تخطيط الورق:
-            </h3>
-
-            <ToggleGroup
-              dir={locale === "ar" ? "rtl" : "ltr"}
-              type="single"
-              value={coverType}
-              onValueChange={(value) => value && setCoverType(value)}
-              className="flex flex-wrap gap-4 justify-start sm:justify-center"
-            >
-              {shapes.map((shape) => (
-                <ToggleGroupItem
-                  key={shape.id}
-                  value={String(shape.id)}
-                  className="flex flex-col items-center justify-center w-32 h-36 sm:w-28 sm:h-32
-                  border border-gray-300 rounded-xl shadow-sm transition-all duration-200
-                  hover:bg-primary/10 hover:border-primary focus:outline-none
-                  data-[state=on]:bg-primary data-[state=on]:text-white data-[state=on]:border-primary"
-                >
-                  <Image
-                    src={shape.img}
-                    alt="شكل التخطيط"
-                    width={70}
-                    height={70}
-                    className="object-contain w-full h-full mb-2"
-                  />
-                </ToggleGroupItem>
-              ))}
-            </ToggleGroup>
-          </div>
-
-          {/* جوانب الطباعة */}
-          <div className="flex flex-col items-start gap-3 w-full">
-            <h3 className="text-lg font-semibold mb-2 text-primary">
-              جوانب الطباعة :
-            </h3>
-            <ToggleGroup
-              dir={locale === "ar" ? "rtl" : "ltr"}
-              type="single"
-              value={paperSide}
-              onValueChange={(value) => value && setPaperSide(value)}
-              className="flex flex-wrap gap-2 w-full"
-            >
-              {["وجهين", "وجه"].map((side) => (
-                <ToggleGroupItem
-                  key={side}
-                  value={side}
-                  className="py-2 px-8 border border-gray-300 rounded-sm transition-all duration-200
-                  hover:bg-primary hover:text-white data-[state=on]:bg-primary data-[state=on]:text-white"
-                >
-                  {side}
                 </ToggleGroupItem>
               ))}
             </ToggleGroup>
@@ -245,7 +146,8 @@ const Print = () => {
                       {item.title}
                     </h4>
                     <p className="text-sm text-gray-500">
-                      عدد الورق: {item.paper}
+                      {locale === "ar" ? "عدد الورق: " : "Paper Count: "}{" "}
+                      {item.paper}
                     </p>
                   </div>
                 </ToggleGroupItem>
@@ -292,4 +194,4 @@ const Print = () => {
   );
 };
 
-export default Print;
+export default FormEng;

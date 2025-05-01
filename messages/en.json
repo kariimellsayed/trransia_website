@@ -62,10 +62,10 @@
       "description": "Enhance your events with Transia’s screens and billboards! We offer sales and rental services for indoor LED screens (P2.5, P3, P4), outdoor LED screens (P4, P5), and flexible LED screens for exhibitions, malls, studios, cafes, and roadside billboards with high quality and full technical support.",
       "keywords": "LED Screens, Indoor LED Screens, Outdoor LED Screens, Flexible LED Screens, Billboards, Screen Rental, Screen Sales, Exhibition Screens, Mall Screens, Cafe Screens, Roadside Billboards, Technical Support, Transia, Display Solutions"
     },
-    "busi": {
-      "title": "Business Services | Transia",
-      "description": "Elevate your business with Transia’s business services! We offer comprehensive solutions including business plan development, consulting, and project management to achieve your goals efficiently.",
-      "keywords": "Business Services, Business Plans, Business Consulting, Project Management, Business Solutions, Transia, Business Support"
+    "eng": {
+      "title": "Engineering Printing | Transia",
+      "description": "Order high-precision engineering blueprints printing from Transia! Professional printing services for engineers and students, supporting all sizes with exceptional quality and speed.",
+      "keywords": "Engineering Blueprints Printing, High-Quality Blueprint Printing, Printing Services for Engineers, Student Printing Services, Transia, Precise Printing"
     }
   },
   "Account": {
@@ -312,13 +312,13 @@
     "service1": "Copying and Printing",
     "service2": "Academic Research Writing",
     "service3": "Presentation Preparation",
-    "service4": "Engineering Blueprint Printing",
+    "service4": "SPSS Statistical Analysis",
     "other": "other",
 
     "service1des": "We offer high-quality copying and printing services with fast turnaround, supporting all sizes and types to meet students’ academic needs.",
     "service2des": "We help you write professional academic research that meets university standards.",
-    "service3des": "We design engaging and organized presentations to help you present your ideas",
-    "service4des": "We print your engineering blueprints with high precision using the latest technology"
+    "service3des": "We create professional and engaging presentations (including PowerPoint) to help you showcase your ideas with confidence and clarity.",
+    "service4des": "Professional SPSS statistical analysis to empower your research! We provide accurate data analysis, hypothesis testing, and clear charts with comprehensive reports."
   },
   "Marketing": {
     "title": "Digital Marketing",
@@ -390,12 +390,20 @@
     "service2": "Poster Design",
     "service3": "Promotional Videos",
     "service4": "Promotional Cards Design",
+    "service5": "Logo Printing on Products",
+    "service6": "Brochure Design",
+    "service7": "Banner Printing",
+    "service8": "Laser, Stickers, and Stamps",
     "other": "other",
 
     "service1des": "We design large, eye-catching billboards to ensure your message reaches your audience.",
     "service2des": "We provide innovative poster designs tailored to your advertising campaign needs.",
     "service3des": "We produce professional promotional videos that capture your audience's attention.",
-    "service4des": "We design professional and creative promotional cards that reflect your brand identity."
+    "service4des": "We design professional promotional cards (including business cards) that elegantly reflect your brand identity.",
+    "service5des": "We offer professional logo printing on various products such as t-shirts, pens, mugs, metals, and signs, to enhance your brand visibility.",
+    "service6des": "We design attractive and organized brochures that reflect your brand vision and help you effectively promote your products and services.",
+    "service7des": "We print high-quality banners with innovative designs that suit your events and help you easily capture your audience's attention.",
+    "service8des": "We offer custom laser and sticker services in all types (glossy, transparent, matte, and more), along with the design and creation of various stamps to meet your promotional needs with high quality and a creative touch."
   },
   "Electronic": {
     "title": "Electronic-Services",
@@ -405,13 +413,13 @@
 
     "service1": "E-Commerce Store Creation and Management",
     "service2": "Online Booking and Appointment Management",
-    "service3": "E-Payment and Invoicing Services",
+    "service3": "Government Services Processing",
     "service4": "Interactive E-Forms Creation",
     "other": "other",
 
-    "service1des": "Design and develop professional e-commerce stores.",
+    "service1des": "We design and develop professional e-commerce stores tailored to your business needs! Our services include creating attractive interfaces, integrating secure payment systems, and managing products and orders effortlessly, ensuring a seamless and exceptional shopping experience for your customers.",
     "service2des": "Develop online booking systems for businesses with an easy interface for clients.",
-    "service3des": "Provide secure e-payment solutions with customized invoice generation and delivery.",
+    "service3des": "Effortlessly handle government services transactions! We offer comprehensive solutions for platforms like Engaz, Qiwa, Ejar, Balady, Civil Registry, Absher, Absher Business, as well as rental contracts and traffic requirements, saving you time and effort.",
     "service4des": "Design customized e-forms like surveys and service requests, with data collection."
   },
   "Gifts": {
@@ -428,8 +436,8 @@
     "other": "other",
 
     "service1des": "We provide custom gifts with your logo, such as pens, mugs, t-shirts, and medals, with high quality.",
-    "service2des": "We design custom gifts for conferences, exhibitions, and holidays.",
-    "service3des": "We offer design and printing services for your logo or promotional messages on gifts.",
+    "service2des": "We design and prepare custom gifts for conferences, exhibitions, holidays, and various events, with elegant packaging that suits the occasion, while handling all preparations to ensure a seamless and comprehensive event experience.",
+    "service3des": "We provide high-quality design and printing of your logo or promotional messages on everything, including branded items, bags, totes, and all promotional products, ensuring your brand stands out in every detail.",
 
     "benefit1": "Innovative Designs",
     "benefit2": "Elegant Packaging",
@@ -461,22 +469,16 @@
     "service4": "Technical Support for Screens",
     "other": "other"
   },
-  "Business": {
-    "title": "Business Services",
-    "des": "At Transia, we empower your business success with comprehensive services tailored for entrepreneurs! We offer professional solutions including business plan development, consulting, and project management to achieve your goals efficiently and swiftly.",
-
-    "order": "Order your service now",
+  "Eng": {
+    "title": "Engineering Blueprints Printing",
+    "des": "Elevate your engineering projects with exceptional blueprint printing services! We provide precise printing solutions that support all sizes and designs, focusing on details to ensure every line and element is perfectly clear. Whether you're a professional engineer or a student working on a graduation project, we’re here to bring your vision to life with unmatched speed and efficiency.",
 
     "our": "Our services include",
+    "our1": "AutoCAD Drawings Printing",
+    "our2": "All Sizes Blueprints Printing",
+    "our3": "Color and Black & White Printing",
 
-    "service1": "Business Plan Development",
-    "service2": "Business Consulting",
-    "service3": "Project Management",
-    "other": "other",
-
-    "service1des": "We design professional business plans to help you with strategic planning and attracting investors.",
-    "service2des": "We provide consulting to improve operational performance, manage risks, and increase profits.",
-    "service3des": "Project management services to ensure projects are completed on time with high quality.",
+    "order": "Order your service now",
 
     "benefit1": "Tailored Solutions",
     "benefit2": "Professional Team",

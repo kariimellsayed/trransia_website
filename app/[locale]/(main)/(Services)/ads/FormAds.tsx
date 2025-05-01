@@ -15,7 +15,17 @@ import { toast } from "sonner";
 import { useLocale, useTranslations } from "next-intl";
 
 // لستة خدمات تقنية المعلومات
-const services = ["service1", "service2", "service3", "service4", "other"];
+const services = [
+  "service1",
+  "service2",
+  "service3",
+  "service4",
+  "service5",
+  "service6",
+  "service7",
+  "service8",
+  "other",
+];
 
 const FormAds = () => {
   const [serviceType, setServiceType] = useState<string>("");

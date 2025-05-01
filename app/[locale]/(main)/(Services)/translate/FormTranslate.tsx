@@ -31,12 +31,7 @@ const FormTranslate = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-
-    if (!sourceLang || !targetLang) {
-      toast.error("من فضلك اختر اللغات المطلوبة.");
-      return;
-    }
-
+    //
     if (!selectedFile) {
       toast.error("الرجاء إرفاق ملف للترجمة.");
       return;
@@ -139,7 +134,7 @@ const FormTranslate = () => {
         </div>
 
         {/* زر التنفيذ */}
-        {sourceLang && targetLang && selectedFile && (
+        {selectedFile && (
           <div className="animate-slideIn delay-500">
             <Button
               type="submit"

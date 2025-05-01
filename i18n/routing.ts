@@ -54,9 +54,9 @@ export const routing = defineRouting({
       en: "/gifts",
       ar: "/هدايا_دعائية",
     },
-    "/business": {
-      en: "/business",
-      ar: "/رجال_الأعمال",
+    "/eng": {
+      en: "/eng",
+      ar: "/مخططات_هندسية",
     },
     "/register": {
       en: "/register",

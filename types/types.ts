@@ -11,7 +11,7 @@ export type ValidPathnames =
   | "/electronic"
   | "/screens"
   | "/gifts"
-  | "/business";
+  | "/eng";
 
 export interface NavLink {
   key: string;

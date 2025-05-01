@@ -78,12 +78,13 @@ const Student = () => {
         </div>
 
         {/* student Cards */}
-        <div className="mt-10">
+        <div className="mt-7">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {students.map((student) => (
               <div
                 key={student.title}
-                className="bg-white/90 backdrop-blur-md border border-gray-200 rounded-xl shadow-md hover:shadow-lg hover:shadow-primary/20 transition-all duration-300 animate-slideIn overflow-hidden"
+                className="flex flex-col justify-between bg-white/90 backdrop-blur-md border border-gray-200 rounded-xl
+                         shadow-md hover:shadow-lg hover:shadow-primary/20 transition-all duration-300 animate-slideIn overflow-hidden"
               >
                 {/* Card Image */}
                 <div className="relative w-full h-40">
@@ -97,29 +98,34 @@ const Student = () => {
                 </div>
 
                 {/* Card Content */}
-                <div className="p-6 flex flex-col gap-4">
-                  <h3 className="text-lg font-semibold text-primary mb-2">
-                    {t(student.title)}
-                  </h3>
-                  <p className="text-gray-800 text-base">
-                    {t(student.description)}
-                  </p>
+                <div className="flex flex-col flex-grow p-6">
+                  <div className="flex-grow">
+                    <h3 className="text-lg font-semibold text-primary mb-2">
+                      {t(student.title)}
+                    </h3>
+                    <p className="text-gray-800 text-base">
+                      {t(student.description)}
+                    </p>
+                  </div>
 
-                  {student.href ? (
-                    <Link
-                      href="/student/print"
-                      className="self-start bg-primary hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-full transition-all duration-300"
-                    >
-                      {t("order")}
-                    </Link>
-                  ) : (
-                    <a
-                      href="#student"
-                      className="self-start bg-primary hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-full transition-all duration-300"
-                    >
-                      {t("order")}
-                    </a>
-                  )}
+                  {/* زرار الطلب */}
+                  <div className="mt-6">
+                    {student.href ? (
+                      <Link
+                        href="/student/print"
+                        className="self-start bg-primary hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-full transition-all duration-300"
+                      >
+                        {t("order")}
+                      </Link>
+                    ) : (
+                      <a
+                        href="#student"
+                        className="self-start bg-primary hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-full transition-all duration-300"
+                      >
+                        {t("order")}
+                      </a>
+                    )}
+                  </div>
                 </div>
               </div>
             ))}

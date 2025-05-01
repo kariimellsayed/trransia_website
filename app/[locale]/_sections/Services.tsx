@@ -36,13 +36,13 @@ const Services = () => {
                 </div>
 
                 {/* زر النص */}
-                <div
+                <h2
                   className={`absolute bottom-[-15px] px-6 py-2 ${
                     index % 2 === 0 ? "bg-black" : "bg-primary"
-                  } text-white text-xl font-semibold rounded-full shadow-md`}
+                  } text-white text-base font-semibold rounded-full shadow-md`}
                 >
                   {t(service.key)}
-                </div>
+                </h2>
               </Link>
             </div>
           ))}

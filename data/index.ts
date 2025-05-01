@@ -19,7 +19,7 @@ export const navLinks: NavLink[] = [
       { key: "service6", href: "/electronic" },
       { key: "service7", href: "/screens" },
       { key: "service8", href: "/gifts" },
-      { key: "service9", href: "/business" },
+      { key: "service9", href: "/eng" },
     ],
   },
 ];
@@ -34,7 +34,7 @@ export const services = [
   { key: "serve6", img: "/tech.svg", href: "/tech" },
   { key: "serve7", img: "/gifts.svg", href: "/gifts" },
   { key: "serve8", img: "/screen.svg", href: "/screens" },
-  { key: "serve9", img: "/business.svg", href: "/business" },
+  { key: "serve9", img: "/engg.svg", href: "/eng" },
 ];
 
 // ServicesSection
@@ -47,7 +47,7 @@ export const servicesCards: ServicesCards[] = [
   { key: "elec", img: "/serv7.png", href: "/electronic" },
   { key: "screen", img: "/screen.svg", href: "/screens" },
   { key: "gifts", img: "/serv9.png", href: "/gifts" },
-  { key: "business", img: "/serv3.png", href: "/business" },
+  { key: "business", img: "/engg.svg", href: "/eng" },
 ];
 
 // Banners
@@ -197,10 +197,18 @@ export const markets = [
 
 // Ads
 export const ads = [
-  { title: "service1", description: "service1des", image: "/buil.png" },
+  { title: "service1", description: "service1des", image: "/outscreen.png" },
   { title: "service2", description: "service2des", image: "/posters.png" },
   { title: "service3", description: "service3des", image: "/video.png" },
-  { title: "service4", description: "service3des", image: "/cards.png" },
+  { title: "service4", description: "service4des", image: "/cards.png" },
+  { title: "service5", description: "service5des", image: "/gifts1.png" },
+  { title: "service6", description: "service6des", image: "/brouch.png" },
+  { title: "service7", description: "service7des", image: "/baner.png" },
+  {
+    title: "service8",
+    description: "service8des",
+    image: "/sticker.png",
+  },
 ];
 
 // Student
@@ -213,15 +221,15 @@ export const students = [
   },
   { title: "service2", description: "service2des", image: "/reserch.png" },
   { title: "service3", description: "service3des", image: "/prisnts.png" },
-  { title: "service4", description: "service4des", image: "/paint.png" },
+  { title: "service4", description: "service4des", image: "/stats.png" },
 ];
 
 // Electronics Services
 export const electronics = [
-  { title: "service1", description: "service1des", image: "/ecommerce.png" },
+  { title: "service3", description: "service3des", image: "/gov.png" },
   { title: "service2", description: "service2des", image: "/booking.png" },
-  { title: "service3", description: "service3des", image: "/payment.png" },
   { title: "service4", description: "service3des", image: "/eforms.png" },
+  { title: "service1", description: "service1des", image: "/ecommerce.png" },
 ];
 
 // Gifts Services
@@ -229,11 +237,4 @@ export const gifts = [
   { title: "service1", description: "service1des", image: "/gifts1.png" },
   { title: "service2", description: "service2des", image: "/gifts2.png" },
   { title: "service3", description: "service3des", image: "/gifts3.png" },
-];
-
-// Business Services
-export const business = [
-  { title: "service1", description: "service1des", image: "/business1.png" },
-  { title: "service2", description: "service2des", image: "/business2.png" },
-  { title: "service3", description: "service3des", image: "/business3.png" },
 ];
