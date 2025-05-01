@@ -26,6 +26,8 @@ const Footer = () => {
           <div className="space-y-6 text-brandblack lg:col-span-2">
             <p>{t("Footer.des")}</p>
 
+            <p className="font-medium">{t("Footer.pay")}</p>
+
             <p className="font-semibold">
               {t("Footer.acount")} :
               <span className="font-normal"> 68205008787000</span>

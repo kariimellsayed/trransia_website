@@ -1,8 +1,6 @@
-import { services } from "@/data";
 import { Link as IntlLink } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 import ServicesGrid from "./_components/ui/ServicesGrid";
 
@@ -44,17 +42,30 @@ const Teaser = () => {
 
       {/* Sale Box Section */}
       <div className="flex justify-center animate-fadeInUp mt-10">
-        <Link
-          href="/register"
+        <div
           className="w-full max-w-4xl flex items-center flex-col md:flex-row justify-between gap-4 py-3 sm:py-2 px-6
            bg-white rounded-2xl shadow-lg shadow-primary border border-gray-200 group"
         >
-          {/* Offer Texts */}
-          <div className="flex flex-col md:items-end items-center gap-1">
-            <p className="sm:text-xl text-base text-gray-600">{t("offer")}</p>
-            <p className="sm:text-xl text-base font-semibold">
-              {t("descount")}
-            </p>
+          {/* Download */}
+          <div className="flex flex-col md:items-end items-center gap-2">
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <Image
+                src="/googleplay.png"
+                alt="Download on Google Play"
+                width={140}
+                height={45}
+                className="object-contain transition-transform duration-200 hover:scale-105"
+              />
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <Image
+                src="/apple.png"
+                alt="Download on App Store"
+                width={140}
+                height={45}
+                className="object-contain transition-transform duration-200 hover:scale-105"
+              />
+            </a>
           </div>
           <div className="flex items-center">
             <Image
@@ -65,7 +76,11 @@ const Teaser = () => {
               className="object-contain sm:w-44 sm:h-44 w-24 h-24"
             />
           </div>
-          <div className="flex items-center">
+          <div className="flex flex-col items-center gap-4">
+            <p className="sm:text-xl text-base font-semibold">
+              {t("descount")}
+            </p>
+
             <button
               className="text-xl font-bold text-white bg-primary px-8 py-2 rounded-2xl transition-all
              duration-200 hover:bg-red-600 group-hover:scale-90"
@@ -73,7 +88,7 @@ const Teaser = () => {
               {t("reg")}
             </button>
           </div>
-        </Link>
+        </div>
       </div>
       {/* Services Cards */}
       <ServicesGrid />
