@@ -162,7 +162,7 @@
     "service6": "Electronic services",
     "service7": "Screens and panels",
     "service8": "promotional gifts",
-    "service9": "Business Services",
+    "service9": "Charts and prints",
     "mobiletitle": "Transia"
   },
   "Footer": {
@@ -199,7 +199,7 @@
     "serve6": "Information Technology",
     "serve7": "Promotional Gifts",
     "serve8": "Screens and panels",
-    "serve9": "Business Services"
+    "serve9": "Charts and prints"
   },
   "Hero": {
     "title": "Transia",
@@ -219,7 +219,7 @@
     "des": "We have extensive experience in the field of translation of all world languages, as well as advertising, publicity and electronic services.",
     "trans": "Certified translation",
     "ad": "Advertising and publicity",
-    "business": "Businessmen Service",
+    "business": "Charts and prints",
     "tech": "Information Technology",
     "marketing": "e-marketing",
     "student": "Student Services",
