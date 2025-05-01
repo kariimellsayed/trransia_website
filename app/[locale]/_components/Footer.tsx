@@ -26,8 +26,6 @@ const Footer = () => {
           <div className="space-y-6 text-brandblack lg:col-span-2">
             <p>{t("Footer.des")}</p>
 
-            <p>{t("Footer.offer")}.</p>
-
             <p className="font-semibold">
               {t("Footer.acount")} :
               <span className="font-normal"> 68205008787000</span>
@@ -36,6 +34,8 @@ const Footer = () => {
               {t("Footer.ipan")} :
               <span className="font-normal"> SA74050000068205008787000</span>
             </p>
+
+            <p>{t("Footer.offer")}.</p>
           </div>
 
           {/* Worktime */}

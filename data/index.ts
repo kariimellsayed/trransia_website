@@ -30,11 +30,11 @@ export const services = [
   { key: "serve2", img: "/student.svg", href: "/student" },
   { key: "serve3", img: "/ad.svg", href: "/ads" },
   { key: "serve4", img: "/marketing.svg", href: "/marketing" },
-  { key: "serve5", img: "/elec.svg", href: "/electronic" },
-  { key: "serve6", img: "/tech.svg", href: "/tech" },
   { key: "serve7", img: "/gifts.svg", href: "/gifts" },
-  { key: "serve8", img: "/screen.svg", href: "/screens" },
   { key: "serve9", img: "/engg.svg", href: "/eng" },
+  { key: "serve6", img: "/tech.svg", href: "/tech" },
+  { key: "serve5", img: "/elec.svg", href: "/electronic" },
+  { key: "serve8", img: "/screen.svg", href: "/screens" },
 ];
 
 // ServicesSection
