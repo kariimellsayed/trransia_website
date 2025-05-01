@@ -57,7 +57,7 @@ const Student = () => {
               <a
                 href="#student"
                 className="bg-primary hover:bg-red-600 text-white font-semibold py-3 px-8 rounded-full
-                 transition-all duration-300 shadow-md hover:shadow-lg hover:shadow-primary/20 animate-slideIn"
+                transition-all text-sm sm:text-lg duration-300 shadow-md hover:shadow-lg hover:shadow-primary/20 animate-slideIn"
               >
                 {t("order")}
               </a>
