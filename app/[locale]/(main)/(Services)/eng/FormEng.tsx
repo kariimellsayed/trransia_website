@@ -24,7 +24,7 @@ const FormEng = () => {
 
   const cover = [
     { id: 1, img: "/cover1.png", title: "بدون تغليف", paper: "غير محدود" },
-    { id: 2, img: "/cover2.png", title: "كيس شفاف", paper: "1 إلى 50" },
+    { id: 2, img: "/cover2.png", title: "تغليف شفاف", paper: "1 إلى 50" },
   ];
 
   // التحقق من صحة الفورم (حقل الملف اختياري، مش هيأثر على التحقق)
