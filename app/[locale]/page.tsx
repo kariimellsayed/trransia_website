@@ -47,25 +47,30 @@ const Teaser = () => {
            bg-white rounded-2xl shadow-lg shadow-primary border border-gray-200 group"
         >
           {/* Download */}
-          <div className="flex flex-col md:items-end items-center gap-2">
-            <a href="#" target="_blank" rel="noopener noreferrer">
-              <Image
-                src="/googleplay.png"
-                alt="Download on Google Play"
-                width={140}
-                height={45}
-                className="object-contain transition-transform duration-200 hover:scale-105"
-              />
-            </a>
-            <a href="#" target="_blank" rel="noopener noreferrer">
-              <Image
-                src="/apple.png"
-                alt="Download on App Store"
-                width={140}
-                height={45}
-                className="object-contain transition-transform duration-200 hover:scale-105"
-              />
-            </a>
+          <div className="flex flex-col items-center gap-2">
+            <p className="sm:text-lg text-base font-semibold">
+              قم بتحميل التطبيق واستفد بالعروض
+            </p>
+            <div className="flex flex-col items-center gap-2">
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                <Image
+                  src="/googleplay.png"
+                  alt="Download on Google Play"
+                  width={140}
+                  height={45}
+                  className="object-contain transition-transform duration-200 hover:scale-105"
+                />
+              </a>
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                <Image
+                  src="/apple.png"
+                  alt="Download on App Store"
+                  width={140}
+                  height={45}
+                  className="object-contain transition-transform duration-200 hover:scale-105"
+                />
+              </a>
+            </div>
           </div>
           <div className="flex items-center">
             <Image
