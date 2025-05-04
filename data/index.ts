@@ -211,7 +211,7 @@ export const ads = [
   },
 ];
 
-// Student
+// Students
 export const students = [
   {
     title: "service1",

@@ -7,6 +7,7 @@ import { Tajawal, Inter } from "next/font/google";
 import { Toaster } from "@/components/ui/sonner";
 import { getTranslations } from "next-intl/server";
 import WhatsAppButton from "./_components/ui/WhatsAppButton";
+import SocialMediaButtons from "./_components/ui/SocialMediaButtons";
 
 // Fonts
 const tajawal = Tajawal({
@@ -82,6 +83,7 @@ export default async function LocaleLayout({
         <NextIntlClientProvider>
           {children}
           <WhatsAppButton />
+          <SocialMediaButtons />
         </NextIntlClientProvider>
         <Toaster />
       </body>
