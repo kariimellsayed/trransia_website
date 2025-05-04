@@ -24,6 +24,11 @@ const socialLinks = [
     alt: "Facebook",
     url: "https://facebook.com/yourpage",
   },
+  {
+    src: "/linkedin.svg",
+    alt: "LinkedIn",
+    url: "https://linkedin.com/in/yourprofile",
+  },
 ];
 
 // Animation variants
@@ -36,10 +41,9 @@ const containerVariants = {
     x: 0,
     opacity: 1,
     transition: {
-      transition: { duration: 0.2, ease: "easeOut" },
-      stiffness: 100,
-      damping: 15,
-      staggerChildren: 0.1,
+      duration: 0.3,
+      ease: "easeOut",
+      staggerChildren: 0.07,
     },
   },
 };
@@ -50,9 +54,8 @@ const itemVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      type: "spring",
-      stiffness: 300,
-      damping: 20,
+      duration: 0.2,
+      ease: "easeOut",
     },
   },
 };
@@ -60,8 +63,7 @@ const itemVariants = {
 export default function SocialMediaButtons() {
   return (
     <motion.div
-      className="fixed bottom-6 left-6 z-50 flex flex-col rounded-xl backdrop-blur-md shadow-md
-     transition-all duration-300 hover:shadow-xl bg-white/80 space-y-2 border-2 border-primary"
+      className="fixed bottom-6 left-4 z-50 flex flex-col"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
@@ -73,11 +75,11 @@ export default function SocialMediaButtons() {
           target="_blank"
           rel="noopener noreferrer"
           variants={itemVariants}
-          whileHover={{ scale: 1.1 }}
+          whileHover={{ scale: 1.15 }}
           title={alt}
-          className="w-12 h-12 flex items-center justify-center"
+          className="w-10 h-10 flex items-center justify-center transition-transform duration-300"
         >
-          <Image src={src} alt={alt} width={30} height={30} />
+          <Image src={src} alt={alt} width={28} height={28} />
         </motion.a>
       ))}
     </motion.div>
