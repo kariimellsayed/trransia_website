@@ -60,7 +60,7 @@ const FormEng = () => {
   return (
     <section className="padding min-h-screen">
       <div
-        id="print"
+        id="eng"
         className="relative bg-white/90 backdrop-blur-md border p-8 rounded-xl shadow-xl shadow-primary/30 w-full max-w-4xl mx-auto animate-slideIn"
       >
         <form className="space-y-6" onSubmit={handleSubmit}>
