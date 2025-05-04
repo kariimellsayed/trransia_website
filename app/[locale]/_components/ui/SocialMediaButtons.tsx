@@ -20,6 +20,11 @@ const socialLinks = [
     url: "https://linkedin.com/in/yourprofile",
   },
   {
+    src: "/tiktok.svg",
+    alt: "Tiktok",
+    url: "https://tikok.com/yourpage",
+  },
+  {
     src: "/insta.svg",
     alt: "Instagram",
     url: "https://instagram.com/yourpage",
@@ -41,9 +46,9 @@ const containerVariants = {
     x: 0,
     opacity: 1,
     transition: {
-      duration: 0.3,
+      duration: 0.5,
       ease: "easeOut",
-      staggerChildren: 0.07,
+      staggerChildren: 0.1,
     },
   },
 };
@@ -54,7 +59,7 @@ const itemVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.2,
+      duration: 0.3,
       ease: "easeOut",
     },
   },
@@ -63,7 +68,7 @@ const itemVariants = {
 export default function SocialMediaButtons() {
   return (
     <motion.div
-      className="fixed bottom-6 left-4 z-50 flex flex-col gap-2"
+      className="fixed bottom-6 left-6 z-50 flex flex-col gap-2"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
@@ -75,11 +80,22 @@ export default function SocialMediaButtons() {
           target="_blank"
           rel="noopener noreferrer"
           variants={itemVariants}
-          whileHover={{ scale: 1.15 }}
+          whileHover={{
+            scale: 1.1,
+            transition: { duration: 0.2 },
+          }}
+          whileTap={{ scale: 0.95 }}
           title={alt}
-          className="flex items-center justify-center transition-transform duration-300"
+          className="flex items-center justify-center p-2 rounded-full bg-white/80 shadow-md
+           hover:shadow-lg transition-all duration-300"
         >
-          <Image src={src} alt={alt} width={30} height={30} />
+          <Image
+            src={src}
+            alt={alt}
+            width={24}
+            height={24}
+            className="opacity-80 hover:opacity-100 transition-opacity duration-300"
+          />
         </motion.a>
       ))}
     </motion.div>
