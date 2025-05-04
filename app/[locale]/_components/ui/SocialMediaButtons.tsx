@@ -15,6 +15,11 @@ const socialLinks = [
     url: "https://twitter.com/yourpage",
   },
   {
+    src: "/linkedin.svg",
+    alt: "LinkedIn",
+    url: "https://linkedin.com/in/yourprofile",
+  },
+  {
     src: "/insta.svg",
     alt: "Instagram",
     url: "https://instagram.com/yourpage",
@@ -23,11 +28,6 @@ const socialLinks = [
     src: "/face.svg",
     alt: "Facebook",
     url: "https://facebook.com/yourpage",
-  },
-  {
-    src: "/linkedin.svg",
-    alt: "LinkedIn",
-    url: "https://linkedin.com/in/yourprofile",
   },
 ];
 
@@ -63,7 +63,7 @@ const itemVariants = {
 export default function SocialMediaButtons() {
   return (
     <motion.div
-      className="fixed bottom-6 left-4 z-50 flex flex-col"
+      className="fixed bottom-6 left-4 z-50 flex flex-col gap-2"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
@@ -77,9 +77,9 @@ export default function SocialMediaButtons() {
           variants={itemVariants}
           whileHover={{ scale: 1.15 }}
           title={alt}
-          className="w-10 h-10 flex items-center justify-center transition-transform duration-300"
+          className="flex items-center justify-center transition-transform duration-300"
         >
-          <Image src={src} alt={alt} width={28} height={28} />
+          <Image src={src} alt={alt} width={30} height={30} />
         </motion.a>
       ))}
     </motion.div>
