@@ -7,32 +7,32 @@ const socialLinks = [
   {
     src: "/snap.svg",
     alt: "Snapchat",
-    url: "https://snapchat.com/add/yourpage",
+    url: "https://www.snapchat.com/add/transia_tech?share_id=v1x2PmWnQxQ&locale=ar-EG",
   },
   {
     src: "/x.svg",
     alt: "X (Twitter)",
-    url: "https://twitter.com/yourpage",
+    url: "https://x.com/Transia_Tech",
   },
   {
     src: "/linkedin.svg",
     alt: "LinkedIn",
-    url: "https://linkedin.com/in/yourprofile",
+    url: "https://www.linkedin.com/company/transiia/?viewAsMember=true",
   },
   {
     src: "/tiktok.svg",
     alt: "Tiktok",
-    url: "https://tikok.com/yourpage",
+    url: "https://www.tiktok.com/@transia10?_t=ZS-8wgjfiwRroF&_r=1",
   },
   {
     src: "/insta.svg",
     alt: "Instagram",
-    url: "https://instagram.com/yourpage",
+    url: "https://www.instagram.com/transia.ksa/",
   },
   {
     src: "/face.svg",
     alt: "Facebook",
-    url: "https://facebook.com/yourpage",
+    url: "https://www.facebook.com/profile.php?id=61575923832487",
   },
 ];
 

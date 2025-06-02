@@ -8,8 +8,8 @@ const Back = () => {
   return (
     <Link
       href={"/"}
-      className="text-2xl text-brandblack font-semibold transition-all duration-200 hover:text-primary
-      flex items-center gap-2"
+      className="text-xl text-brandblack font-semibold transition-all duration-200 hover:text-primary
+      flex items-center gap-2 absolute top-5 left-5"
     >
       <ArrowBigLeft scale={16} />
       {t("back")}

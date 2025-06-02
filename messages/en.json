@@ -77,23 +77,8 @@
   "Back": {
     "back": "Back"
   },
-  "RegisterWithEmail": {
-    "title": "Create an Account",
-    "user": "Username",
-    "email": "Email address",
-    "pass": "Password",
-    "eye1": "Show",
-    "eye2": "Hide",
-    "create": "Create Account",
-    "log": "Already have an account ?",
-    "link": "Log in",
-    "place1": "Enter your username",
-    "place2": "Enter your email address",
-    "place3": "Enter your password",
-    "loading": "Sign Up ..."
-  },
   "RegisterWithPhone": {
-    "title": "Create an Account",
+    "title": "Create Account",
     "user": "Username",
     "phone": "Mobile Number",
     "pass": "Password",
@@ -106,21 +91,6 @@
     "place2": "Enter your Mobile Number",
     "place3": "Enter your password",
     "loading": "Sign Up ..."
-  },
-  "LoginWithEmail": {
-    "title": "Login",
-    "email": "Email address",
-    "pass": "Password",
-    "eye1": "Show",
-    "eye2": "Hide",
-    "inter": "Log in",
-    "sign": "Don't have an account ?",
-    "link": "Sign up",
-    "place1": "Enter your email address",
-    "place2": "Enter your password",
-    "rem": "Remember me",
-    "forgot": "Forget password ?",
-    "loading": "Login In ..."
   },
   "LoginWithPhone": {
     "title": "Login",
@@ -139,7 +109,7 @@
   },
   "Forgot": {
     "title": "Forget password ?",
-    "label": "Email address or Phone Numnber",
+    "label": "Phone Numnber",
     "cont": "Continue"
   },
   "Otp": {
@@ -491,5 +461,17 @@
   "Button": {
     "contact": "Contact Us"
   },
-  "Languaches": {}
+  "Dashboard": {
+    "title": "Transia C Panel",
+    "back": "Back To Website",
+    "phone": "Phone Number",
+    "role": "Account Role",
+    "set": "Settings",
+    "up": "Update User",
+    "del": "Delete",
+    "add": "Add",
+    "ad2": "Add user",
+    "up2": "Update",
+    "load": "loading..."
+  }
 }

@@ -16,7 +16,7 @@ import {
 
 import LanguageSwitcher from "./ui/LanguageSwitcher";
 import CustomDropdownMenu from "./ui/CustomDropdown";
-import Account from "./ui/Account";
+// import Account from "./ui/Account";
 import { ChevronDown } from "lucide-react";
 
 const Navbar = () => {
@@ -130,7 +130,7 @@ const Navbar = () => {
 
           <div className="flex items-end justify-between py-4 border-b-2 border-brandgray mt-10">
             {/* Profile */}
-            <h3 className="text-black font-semibold">kariimellsayed</h3>
+            {/* <h3 className="text-black font-semibold">kariimellsayed</h3> */}
             {/* Languache */}
             <LanguageSwitcher />
           </div>
@@ -161,7 +161,7 @@ const Navbar = () => {
           )}
 
           {/* Accont */}
-          <Account />
+          {/* <Account /> */}
 
           {/* Language */}
           <LanguageSwitcher />

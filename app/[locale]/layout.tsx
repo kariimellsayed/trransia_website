@@ -49,13 +49,13 @@ export async function generateMetadata({
     openGraph: {
       title: t("title"),
       description: t("description"),
-      // url: "https://transia.com",
+      url: "https://transia.com.sa",
       siteName: "Transia",
       images: ["/assets/og-image.png"],
       locale,
       type: "website",
     },
-    // metadataBase: new URL("https://transia.com"),
+    metadataBase: new URL("https://transia.com.sa"),
   };
 }
 
