@@ -42,19 +42,28 @@ const FormEng = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const data = {
-      paperSize,
-      paperColor,
-      layout,
-      file, // إضافة الملف للبيانات المرسلة
-    };
 
-    //
-    //
-    // Logic
-    //
-    //
-    console.log(data); // مجرد مثال لعرض البيانات في الـ console
+    // تكوين نص الرسالة
+    const message = `📝 طلب جديد - قسم الهندسي:
+  
+📏 حجم الورق: ${paperSize}
+🎨 لون الورق: ${paperColor}
+📦 نوع التغليف: ${layout}
+${file ? `📎 تم إرفاق ملف: ${file.name}` : "📎 لا يوجد ملف مرفق"}
+
+الرجاء التأكيد على الطلب.`;
+
+    // ترميز النص ليناسب رابط واتساب
+    const encodedMessage = encodeURIComponent(message);
+
+    // رقم الواتساب (تأكد من استخدام رمز الدولة بدون +)
+    const whatsappNumber = "966544214748";
+
+    // فتح رابط واتساب
+    window.open(
+      `https://wa.me/${whatsappNumber}?text=${encodedMessage}`,
+      "_blank"
+    );
   };
 
   return (

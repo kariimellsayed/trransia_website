@@ -27,24 +27,29 @@ const FormMarket = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    // تحقق بسيط: نوع الخدمة مطلوب
     if (!serviceType) {
       toast.error("من فضلك اختر الخدمة المطلوبة.");
       return;
     }
 
-    // const whatsappNumber = "966569366161";
+    const message = `
+📢 *طلب خدمة تسويق* 📢
 
-    //
-    //
-    //Logic
-    //
-    //
+🛠️ *نوع الخدمة:* ${t(serviceType)}
+📝 *ملاحظات:* ${notes || "لا توجد"}
+`;
+
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappNumber = "966544214748";
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+    // فتح رابط واتساب
+    window.open(whatsappUrl, "_blank");
 
     // عرض رسالة نجاح
     toast.success("تم ارسال الطلب بنجاح");
 
-    // إعادة تعيين الفورم بعد الإرسال
+    // إعادة تعيين النموذج
     setServiceType("");
     setNotes("");
   };

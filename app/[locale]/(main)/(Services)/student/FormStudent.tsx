@@ -27,19 +27,30 @@ const FormStudent = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // null File
+
     if (!selectedFile) {
       toast.error("الرجاء إرفاق ملف.");
       return;
     }
 
-    //
-    //
-    //Logic
-    //
-    //
+    // تجهيز الرسالة
+    const message =
+      `📚 *طلب خدمة الطالب*\n\n` +
+      `📎 اسم الملف: ${selectedFile.name}\n` +
+      (notes ? `📝 ملاحظات: ${notes}` : "");
 
-    toast.success("تم إرسال الطلب بنجاح");
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappNumber = "966544214748"; // بدون +
+    const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+    // فتح واتساب
+    window.open(whatsappLink, "_blank");
+
+    toast.success("تم تجهيز الرسالة! سيتم فتح واتساب الآن.");
+
+    // تفريغ الحقول
+    setSelectedFile(null);
+    setNotes("");
   };
 
   return (

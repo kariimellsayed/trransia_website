@@ -31,20 +31,29 @@ const FormTranslate = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    //
+
     if (!selectedFile) {
       toast.error("الرجاء إرفاق ملف للترجمة.");
       return;
     }
 
-    //
-    //
-    // Logic
-    //
-    //
+    // تجهيز الرسالة
+    const message =
+      `📄 *طلب ترجمة*\n\n` +
+      `🗣️ من: ${sourceLang || "غير محددة"}\n` +
+      `🔤 إلى: ${targetLang || "غير محددة"}\n` +
+      `📎 اسم الملف: ${selectedFile.name}`;
+
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappNumber = "966544214748";
+    const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+    // فتح رابط واتساب
+    window.open(whatsappLink, "_blank");
 
     toast.success("تم تجهيز الرسالة بنجاح! سيتم فتح واتساب الآن.");
 
+    // Reset form
     setSourceLang("");
     setTargetLang("");
     setSelectedFile(null);

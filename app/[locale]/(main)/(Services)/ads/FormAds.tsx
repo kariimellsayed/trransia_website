@@ -37,24 +37,28 @@ const FormAds = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    // تحقق بسيط: نوع الخدمة مطلوب
     if (!serviceType) {
       toast.error("من فضلك اختر الخدمة المطلوبة.");
       return;
     }
 
-    // const whatsappNumber = "966569366161";
+    // تجهيز الرسالة
+    const message =
+      `🛠️ *طلب خدمة الدعايا والاعلان*\n\n` +
+      `🔧 نوع الخدمة: ${t(serviceType)}\n` +
+      (notes ? `📝 ملاحظات: ${notes}` : "");
 
-    //
-    //
-    //Logic
-    //
-    //
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappNumber = "966544214748"; // بدون + حسب تنسيق واتساب
+    const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+    // فتح الرابط في نافذة جديدة
+    window.open(whatsappLink, "_blank");
 
     // عرض رسالة نجاح
-    toast.success("تم ارسال الطلب بنجاح");
+    toast.success("تم تحويلك إلى الواتساب لإرسال الطلب");
 
-    // إعادة تعيين الفورم بعد الإرسال
+    // إعادة تعيين البيانات
     setServiceType("");
     setNotes("");
   };

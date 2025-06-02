@@ -55,21 +55,29 @@ const Print = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const data = {
-      paperSize,
-      paperType,
-      paperColor,
-      paperShape: coverType,
-      paperSide,
-      coverType: layout,
-      file, // إضافة الملف للبيانات المرسلة
-    };
 
-    //
-    //
-    // Logic
-    //
-    //
+    if (!isFormValid) {
+      alert("يرجى تعبئة جميع الحقول المطلوبة.");
+      return;
+    }
+
+    const message = `
+🖨️ *طلب طباعة جديد* 🖨️
+
+📄 *حجم الورق:* ${paperSize}
+🧾 *نوع الورق:* ${paperType}
+🎨 *لون الورق:* ${paperColor}
+📐 *تخطيط الورق:* ${coverType}
+📑 *جوانب الطباعة:* ${paperSide}
+📦 *نوع التغليف:* ${layout}
+${file ? "📎 تم إرفاق ملف." : "❌ لم يتم إرفاق ملف."}
+  `;
+
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappNumber = "966544214748";
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+    window.open(whatsappUrl, "_blank");
   };
 
   return (

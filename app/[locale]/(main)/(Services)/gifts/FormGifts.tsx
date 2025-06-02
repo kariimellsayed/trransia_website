@@ -27,24 +27,22 @@ const FormGifts = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    // تحقق بسيط: نوع الخدمة مطلوب
     if (!serviceType) {
       toast.error("من فضلك اختر الخدمة المطلوبة.");
       return;
     }
 
-    // const whatsappNumber = "966569366161";
+    const message = `نوع الخدمة: ${t(serviceType)}\nالملاحظات: ${
+      notes || "لا يوجد"
+    }`;
+    const phoneNumber = "966544214748";
+    const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+      message
+    )}`;
 
-    //
-    //
-    //Logic
-    //
-    //
+    window.open(whatsappLink, "_blank");
 
-    // عرض رسالة نجاح
     toast.success("تم ارسال الطلب بنجاح");
-
-    // إعادة تعيين الفورم بعد الإرسال
     setServiceType("");
     setNotes("");
   };
